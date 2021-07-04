@@ -1,24 +1,16 @@
 using FrameworkCore.Patterns.MVC.Controller;
 using UnityEngine;
+using Zenject;
 
 namespace FrameworkCore.Patterns.MVC.View
 {
     public abstract class View : MonoBehaviour
     {
-        protected IController Controller
-        {
-            get
-            {
-                if (controller == null)
-                {
-                    controller = CreateController();
-                }
+        protected IController Controller => controller;
+       
 
-                return controller;
-            }
-        }
-
-        private IController controller;
+        [Inject]
+        protected IController controller;
 
         protected virtual void Start()
         {
@@ -33,10 +25,6 @@ namespace FrameworkCore.Patterns.MVC.View
             }
         }
 
-        protected abstract IController CreateController();
-        
-
-      
     }
 
     public abstract class View<T> : View

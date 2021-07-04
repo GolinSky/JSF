@@ -10,7 +10,7 @@ namespace FrameworkCore.BaseServices.SceneService.View
 
         private void Start()
         {
-            asyncOperation = BaseServices.SceneService.Service.SceneService.LoadSceneAsync();
+            asyncOperation = Service.SceneService.LoadSceneAsync();
             asyncOperation.allowSceneActivation = false;    
         }
 

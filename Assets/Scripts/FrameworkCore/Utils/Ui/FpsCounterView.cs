@@ -23,7 +23,7 @@ namespace FrameworkCore.Utils.Ui
             fpsLabel.text = value;
         }
 
-        protected override IController CreateController() => new FpsCounterController(this);
+    //    protected override IController CreateController() => new FpsCounterController(this);
 
     }
 

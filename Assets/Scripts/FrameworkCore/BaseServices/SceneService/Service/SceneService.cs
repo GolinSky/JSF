@@ -7,7 +7,7 @@ namespace FrameworkCore.BaseServices.SceneService.Service
 {
     public class SceneService
     {
-        public const SceneType EntryScene = SceneType.Loading;
+        public const SceneType EntryScene = SceneType.Example;
         private static LevelModel LevelModel;
         private static SceneType PreviousScene = SceneType.Loading;
 
@@ -61,6 +61,6 @@ namespace FrameworkCore.BaseServices.SceneService.Service
     {
         Unset = -1,
         Loading = 0,
-        Test = 1,
+        Example = 9999,
     }
 }
