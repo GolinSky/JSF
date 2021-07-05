@@ -1,32 +1,9 @@
 ﻿using System.Globalization;
 using FrameworkCore.Patterns.MVC.Controller;
-using FrameworkCore.Patterns.MVC.View;
 using UnityEngine;
-using UnityEngine.UI;
 
-#pragma warning disable 0649
-
-namespace FrameworkCore.Utils.Ui
+namespace FrameworkCore.Utils.Ui.Fps
 {
-    public class FpsCounterView : View
-    {
-        [SerializeField] private Text fpsLabel;
-
-
-        private void Update()
-        {
-           Controller.Execute();
-        }
-
-        public void SetText(string value)
-        {
-            fpsLabel.text = value;
-        }
-
-    //    protected override IController CreateController() => new FpsCounterController(this);
-
-    }
-
     public class FpsCounterController : Controller<FpsCounterView>
     {
         private const float TimeCoefficient = 1.0f;
@@ -48,7 +25,7 @@ namespace FrameworkCore.Utils.Ui
         public override void Execute()
         {
             deltaTime += (Time.unscaledDeltaTime - deltaTime) * DeltaTimeCoefficient;
-            View.SetText(((int) (TimeCoefficient / deltaTime)).ToString(CultureInfo.InvariantCulture));
+            View.SetContext(((int) (TimeCoefficient / deltaTime)).ToString(CultureInfo.InvariantCulture));
         }
     }
 }
