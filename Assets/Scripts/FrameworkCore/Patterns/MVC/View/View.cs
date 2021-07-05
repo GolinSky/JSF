@@ -6,12 +6,9 @@ namespace FrameworkCore.Patterns.MVC.View
 {
     public abstract class View : MonoBehaviour
     {
-        protected IController Controller => controller;
-       
-
         [Inject]
-        protected IController controller;
-
+        protected IController Controller;
+        
         protected virtual void Start()
         {
             Controller.AddListeners();
