@@ -2,16 +2,18 @@
 using System.Collections.Generic;
 using FrameworkCore.BaseServices.SceneService.Service;
 using UnityEngine;
+using Zenject;
 
 namespace FrameworkCore.Utils.State
 {
     public class SceneComponentResolver : MonoBehaviour
     {
         [SerializeField] private List<SceneComponentPreset> sceneComponentList;
-
+        [Inject]
+        private readonly ILevelService levelService;
         private void Start()
         {
-            ValidateComponents(BaseServices.SceneService.Service.SceneService.TargetLevel);
+            ValidateComponents(levelService.CurrentScene);
         }
 
         private void ValidateComponents(SceneType targetLevel)

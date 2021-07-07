@@ -7,7 +7,7 @@ namespace FrameworkCore.Patterns.MVC.View
     public abstract class View : MonoBehaviour
     {
         [Inject]
-        protected IController Controller;
+        protected readonly IController Controller;
         
         protected virtual void Start()
         {

@@ -1,25 +1,10 @@
-﻿using UnityEngine;
-
-namespace FrameworkCore.BaseServices.SceneService.View
+﻿namespace FrameworkCore.BaseServices.SceneService.View
 {
-    public class LevelView : MonoBehaviour
+    public class LevelView : Patterns.MVC.View.View
     {
-        
-        private AsyncOperation asyncOperation;
-        private const double ProgressValue = 0.89;
-
-        private void Start()
-        {
-            asyncOperation = Service.SceneService.LoadSceneAsync();
-            asyncOperation.allowSceneActivation = false;    
-        }
-
         private void Update()
         {
-            if (asyncOperation.progress > ProgressValue)
-            {
-                asyncOperation.allowSceneActivation = true;
-            }
+            Controller.Execute();
         }
     }
 }

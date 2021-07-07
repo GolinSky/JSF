@@ -30,7 +30,7 @@ namespace FrameworkCore.BaseServices.SceneService.Model
     {
         public SceneType TryGetSceneType(string sceneName)
         {
-            SceneType sceneType = BaseServices.SceneService.Service.SceneService.EntryScene;
+            SceneType sceneType = BaseServices.SceneService.Service.LevelService.EntryScene;
             foreach (var sceneAsset in Dictionary)
             {
                 if (sceneAsset.Value.ScenePath.Equals(sceneName))

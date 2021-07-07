@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace FrameworkCore.Examples.ExampleEntity.View
@@ -10,6 +11,11 @@ namespace FrameworkCore.Examples.ExampleEntity.View
         public override void SetContext(string context)
         {
             text.text = context;
+        }
+
+        private void Update()
+        {
+            Controller.Execute();
         }
     }
 }
