@@ -15,10 +15,8 @@ namespace FrameworkCore.ContextEntity.Scene.Example
 
         private void OnValidate()
         {
-        
             this.FindViewDependency(ref exampleView);
             this.FindViewDependency(ref fpsCounterView);
-            
         }
         
         public override void InstallBindings()

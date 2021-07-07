@@ -419,6 +419,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1055780894}
+  - component: {fileID: 1055780893}
   m_Layer: 5
   m_Name: ExampleView
   m_TagString: Untagged
@@ -426,6 +427,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1055780893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055780892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 979635e020d259b45aa386c717c46157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 862898276}
 --- !u!224 &1055780894
 RectTransform:
   m_ObjectHideFlags: 0
@@ -522,7 +536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27c1843598b761d4eba81657db24da2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exampleView: {fileID: 0}
+  exampleView: {fileID: 1055780893}
   fpsCounterView: {fileID: 317803865}
 --- !u!1 &1452146134
 GameObject:
@@ -536,7 +550,6 @@ GameObject:
   - component: {fileID: 1452146138}
   - component: {fileID: 1452146137}
   - component: {fileID: 1452146136}
-  - component: {fileID: 1452146135}
   m_Layer: 5
   m_Name: ExampleVIewCanvas
   m_TagString: Untagged
@@ -544,19 +557,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1452146135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1452146134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 979635e020d259b45aa386c717c46157, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 0}
 --- !u!114 &1452146136
 MonoBehaviour:
   m_ObjectHideFlags: 0
