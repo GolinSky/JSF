@@ -1,5 +1,6 @@
 ﻿using System.Globalization;
 using FrameworkCore.Patterns.MVC.Controller;
+using FrameworkCore.Patterns.MVC.Factory;
 using UnityEngine;
 
 namespace FrameworkCore.Utils.Ui.Fps
@@ -10,7 +11,7 @@ namespace FrameworkCore.Utils.Ui.Fps
         private const float DeltaTimeCoefficient = 0.1f;
         private float deltaTime = 0.0f;
 
-        public FpsCounterController(FpsCounterView view) : base(view)
+        public FpsCounterController(FpsCounterView view, IServiceFactory serviceFactory) : base(view, serviceFactory)
         {
         }
 

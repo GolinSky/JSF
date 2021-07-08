@@ -1,29 +1,40 @@
 using System;
 using System.Collections.Generic;
+using FrameworkCore.BaseServices.ModelService.Service;
 using FrameworkCore.BaseServices.SceneService.Service;
+using FrameworkCore.Patterns.MVC.Service;
+using Zenject;
 
 namespace FrameworkCore.Patterns.MVC.Factory
 {
-    public static class ServiceFactory
+    public class ServiceFactory : IServiceFactory
     {
-        private static Dictionary<Type, Service.BaseServiceLayer> ServiceDictionary =
-            new Dictionary<Type, Service.BaseServiceLayer>();
+        private Dictionary<Type, BaseServiceLayer> ServiceDictionary =
+            new Dictionary<Type, BaseServiceLayer>();
 
-        public static T GetService<T>() where T : Service.BaseServiceLayer
+        [Inject]
+        private readonly IModelService modelService;
+        
+
+        public T GetService<T>() where T : BaseServiceLayer
         {
             if (ServiceDictionary.ContainsKey(typeof(T)))
             {
                 return ServiceDictionary[typeof(T)] as T;
             }
-            else
-            {
-                var instance = (T) Activator.CreateInstance(typeof(T));
-                ServiceDictionary.Add(typeof(T), instance);
-                return instance;
-            }
+
+            return CreateServiceLayer<T>();
         }
 
-        public static void ResetLayers(SceneType sceneType)
+        private T CreateServiceLayer<T>() where T : BaseServiceLayer
+        {
+            var instance = (T) Activator.CreateInstance(typeof(T), modelService);
+            ServiceDictionary.Add(typeof(T), instance);
+            return instance;
+        }
+
+
+        public void ResetLayers(SceneType sceneType)
         {
             foreach (var serviceLayer in ServiceDictionary.Values)
             {
@@ -33,5 +44,12 @@ namespace FrameworkCore.Patterns.MVC.Factory
                 }
             }
         }
-}
+    }
+
+
+    public interface IServiceFactory
+    {
+        T GetService<T>() where T : BaseServiceLayer;
+        void ResetLayers(SceneType sceneType);
+    }
 }

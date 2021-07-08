@@ -12,7 +12,7 @@ namespace FrameworkCore.Examples.ExampleEntity.Controller
     {
         private const string ExampleMessage = "Hello World";
         private readonly ILevelService levelService;
-        public ExampleController(ExampleView view, ILevelService levelService) : base(view)
+        public ExampleController(ExampleView view, ILevelService levelService, IServiceFactory serviceFactory) : base(view, serviceFactory)
         {
             view.SetContext(ExampleMessage + DateTime.Now.Second);
             this.levelService = levelService;
@@ -23,13 +23,14 @@ namespace FrameworkCore.Examples.ExampleEntity.Controller
             base.Execute();
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                // Service.UpdateDto(true);
-                // var context = Service.GetContext();
-                // Debug.Log(context);
+                Service.UpdateDto(true);
+                var context = Service.GetContext();
+                Debug.Log(context);
                 levelService.LoadScene(SceneType.Example);
+                
             }
         }
 
-        private  ExampleServiceLayer Service => ServiceFactory.GetService<ExampleServiceLayer>();
+        private  ExampleServiceLayer Service => serviceFactory.GetService<ExampleServiceLayer>();
     }
 }

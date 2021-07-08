@@ -14,11 +14,14 @@ namespace FrameworkCore.Patterns.MVC.Controller
     
     public abstract class Controller<T>:IController where T:View.View
     {
+        protected readonly IServiceFactory serviceFactory;
         protected T View { get; }
 
-        public Controller(T view)
+        [Inject]
+        public Controller(T view, IServiceFactory serviceFactory)
         {
-            this.View = view;
+            View = view;
+            this.serviceFactory = serviceFactory;
         }
 
         public virtual void AddListeners(){}
@@ -30,9 +33,11 @@ namespace FrameworkCore.Patterns.MVC.Controller
     public abstract class Controller<T, Layer> :Controller<T> where T : View.View where Layer:BaseServiceLayer
     {
         protected readonly Layer serviceLayer;
-        protected Controller(T view) : base(view)
+        [Inject]
+        protected Controller(T view, IServiceFactory serviceFactory) : base(view, serviceFactory)
         {
-            serviceLayer = ServiceFactory.GetService<Layer>();
+            serviceLayer = serviceFactory.GetService<Layer>();
+
         }
 
         public override void AddListeners()

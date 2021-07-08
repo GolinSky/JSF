@@ -2,7 +2,6 @@ using EventHandlerUtils;
 using FrameworkCore.BaseServices.ModelService.Service;
 using FrameworkCore.BaseServices.SceneService.Service;
 using FrameworkCore.Patterns.MVC.Model;
-using Zenject;
 
 namespace FrameworkCore.Patterns.MVC.Service
 {
@@ -22,6 +21,10 @@ namespace FrameworkCore.Patterns.MVC.Service
 
                 return model;
             }
+        }
+
+        protected ServiceLayer(IModelService modelService) : base(modelService)
+        {
         }
     }
     
@@ -48,5 +51,15 @@ namespace FrameworkCore.Patterns.MVC.Service
         }
 
         public override bool IsInited => dto != null;
+
+        protected ServiceLayer(IModelService modelService) : base(modelService)
+        {
+        }
+    }
+
+    public interface IServiceLayer<Dto, Context> 
+    {
+        Context GetContext();
+        void UpdateDto(Dto dto);
     }
 }
