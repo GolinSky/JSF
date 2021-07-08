@@ -1,5 +1,5 @@
 {
-  "name": "com.unity.mvc-framework",
+  "name": "com.custom.mvcframework",
   "version": "1.0.0",
   "displayName": "Unity Framework Package",
   "description": "This is an package which included mvc, zenject",
