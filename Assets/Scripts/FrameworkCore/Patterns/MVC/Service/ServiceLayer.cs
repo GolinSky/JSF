@@ -2,6 +2,7 @@ using EventHandlerUtils;
 using FrameworkCore.BaseServices.ModelService.Service;
 using FrameworkCore.BaseServices.SceneService.Service;
 using FrameworkCore.Patterns.MVC.Model;
+using Zenject;
 
 namespace FrameworkCore.Patterns.MVC.Service
 {
@@ -16,8 +17,7 @@ namespace FrameworkCore.Patterns.MVC.Service
             {
                 if (model == null)
                 {
-                    
-                    model = ModelService.GetModel<MODEL>();
+                    model = modelService.GetModel<MODEL>();
                 }
 
                 return model;

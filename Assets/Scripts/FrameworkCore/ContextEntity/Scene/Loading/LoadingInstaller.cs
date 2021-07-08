@@ -7,7 +7,7 @@ namespace FrameworkCore.ContextEntity.Scene.Loading
     {
         public override void InstallBindings()
         {
-           Container.Bind<SceneLoaderController>().AsSingle().NonLazy();
+           Container.Bind<ITickable>().To<SceneLoaderController>().AsSingle().NonLazy();
         }
     }
 }

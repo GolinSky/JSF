@@ -1,47 +1,15 @@
-using FrameworkCore.MonoBehaviourEntity.Service;
 using FrameworkCore.Patterns.MVC.Factory;
 using FrameworkCore.Patterns.MVC.Service;
+using Zenject;
 
 namespace FrameworkCore.Patterns.MVC.Controller
 {
 
-    public abstract class UpdateController: GraspController<IUpdater>
+  
+    public abstract class UpdateController:ITickable
     {
-        protected UpdateController(IUpdater service) : base(service)
-        {
-        }
-        
-        protected override void AddListeners()
-        {
-            base.AddListeners();
-            service.OnUpdate += Update;
-        }
+        public abstract void Tick();
 
-        protected override void RemoveListeners()
-        {
-            base.RemoveListeners();
-            service.OnUpdate -= Update;
-        }
-
-        protected abstract void Update();
-
-    }
-    public abstract class GraspController<T> where T:class
-    {
-        protected readonly T service;
-        protected GraspController(T service)
-        {
-            this.service = service;
-            AddListeners();
-        }
-        ~GraspController()
-        {
-            RemoveListeners();
-        }
-
-        protected virtual void AddListeners(){}
-        protected virtual void RemoveListeners(){}
-        public virtual void Execute(){}
     }
     
     public abstract class Controller<T>:IController where T:View.View

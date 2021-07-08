@@ -1,4 +1,5 @@
 ﻿using EventHandlerUtils;
+using FrameworkCore.BaseServices.ModelService.Service;
 using FrameworkCore.BaseServices.SceneService.Model;
 using FrameworkCore.Utils.Scene;
 using UnityEngine;
@@ -15,13 +16,9 @@ namespace FrameworkCore.BaseServices.SceneService.Service
         public  Handler<SceneType> SceneUnloadedHandler { get; } = new Handler<SceneType>();
         public  SceneType CurrentScene { get; private set; }
 
-         
-
-
-        // [RuntimeInitializeOnLoadMethod]
-        public LevelService()
+        public LevelService(IModelService modelService)
         {
-            LevelModel = ModelService.Service.ModelService.GetModel<LevelModel>();
+            LevelModel = modelService.GetModel<LevelModel>();
 
             if (Application.isEditor)
             {
@@ -41,7 +38,6 @@ namespace FrameworkCore.BaseServices.SceneService.Service
             }
         }
 
-
         public  AsyncOperation LoadSceneAsync()
         {
             return SceneTools.LoadSceneAsync(LevelModel.GetByType(CurrentScene));
@@ -54,7 +50,6 @@ namespace FrameworkCore.BaseServices.SceneService.Service
             SceneUnloadedHandler?.Invoke(PreviousScene);
             SceneLoadedHandler?.Invoke(sceneType);
             SceneTools.LoadScene(LevelModel.GetByType(SceneType.Loading));
-            
         }
     }
 

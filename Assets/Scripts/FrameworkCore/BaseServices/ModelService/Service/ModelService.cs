@@ -7,11 +7,11 @@ using UnityEngine;
 
 namespace FrameworkCore.BaseServices.ModelService.Service
 {
-    public  class ModelService
+    public class ModelService:IModelService
     {
-        private static GameModel gameModel;
+        private  GameModel gameModel;
 
-        private static GameModel GameModel
+        private  GameModel GameModel
         {
             get
             {
@@ -23,12 +23,15 @@ namespace FrameworkCore.BaseServices.ModelService.Service
                 return gameModel;
             }
         }
-    
-         
-        public static T GetModel<T>() where T : IModel
+        public  T GetModel<T>() where T : IModel
         {
             return GameModel.GetModel<T>();
         }
+    }
+
+    public interface IModelService
+    {
+        T GetModel<T>() where T : IModel;
     }
     
 }

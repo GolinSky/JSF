@@ -73,5 +73,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1090e6fe9e11aa04fa4b71bf246d6f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monoBehaviourUpdater: {fileID: 2231496713136721484, guid: dc58fc88555de204893cf0f2c97c9180,
+  monoBehaviourUpdaterPrefab: {fileID: 2231496713136721484, guid: dc58fc88555de204893cf0f2c97c9180,
     type: 3}
