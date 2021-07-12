@@ -1,8 +1,8 @@
 ﻿using UnityEngine.Examples.ExampleEntity.Service;
 using UnityEngine.Examples.ExampleEntity.View;
-using UnityEngine.Package.Runtime.Scripts.BaseServices.SceneService.Service;
-using UnityEngine.Package.Runtime.Scripts.Patterns.MVC.Controller;
-using UnityEngine.Package.Runtime.Scripts.Patterns.MVC.Factory;
+using UnityEngine.MyPackage.Runtime.Scripts.BaseServices.SceneService.Service;
+using UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Controller;
+using UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Factory;
 using Zenject;
 
 namespace UnityEngine.Examples.ExampleEntity.Controller

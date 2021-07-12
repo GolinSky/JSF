@@ -1,8 +1,8 @@
 ﻿using UnityEngine.Examples.ExampleEntity.Controller;
 using UnityEngine.Examples.ExampleEntity.View;
-using UnityEngine.Package.Runtime.Scripts.Extensions.MonoInstaller;
-using UnityEngine.Package.Runtime.Scripts.Patterns.MVC.Controller;
-using UnityEngine.Package.Runtime.Scripts.Utils.Ui.Fps;
+using UnityEngine.MyPackage.Runtime.Scripts.Extensions.MonoInstaller;
+using UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Controller;
+using UnityEngine.MyPackage.Runtime.Scripts.Utils.Ui.Fps;
 using Zenject;
 
 namespace UnityEngine.Examples.ContextEntity.Scene.Example

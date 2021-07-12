@@ -1,4 +1,4 @@
-using UnityEngine.Package.Runtime.Scripts.BaseServices.SceneService.Controller;
+using UnityEngine.MyPackage.Runtime.Scripts.BaseServices.SceneService.Controller;
 using Zenject;
 
 namespace UnityEngine.Examples.ContextEntity.Scene.Loading

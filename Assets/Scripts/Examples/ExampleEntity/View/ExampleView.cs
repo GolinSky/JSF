@@ -1,4 +1,4 @@
-﻿using UnityEngine.Package.Runtime.Scripts.Patterns.MVC.View;
+﻿using UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.View;
 using UnityEngine.UI;
 
 namespace UnityEngine.Examples.ExampleEntity.View
