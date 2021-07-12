@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.U2D;
 
-namespace FrameworkCore.Utils.Ui
+namespace Runtime.Scripts.Utils.Ui
 {
     public static class SpriteUtils
     {

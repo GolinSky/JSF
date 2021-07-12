@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using FrameworkCore.Patterns.MVC.Dto;
-using FrameworkCore.Patterns.MVC.Model;
+using Runtime.Scripts.Patterns.MVC.Dto;
+using Runtime.Scripts.Patterns.MVC.Model;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
 #pragma warning disable 0649
 
-namespace FrameworkCore.BaseServices.ModelService.Model
+namespace Runtime.Scripts.BaseServices.ModelService.Model
 {
     [Serializable]
     public class Data<V>:ScriptableObject where V : Dto

@@ -1,8 +1,8 @@
-using FrameworkCore.Patterns.MVC.Factory;
-using FrameworkCore.Patterns.MVC.Service;
+using Runtime.Scripts.Patterns.MVC.Factory;
+using Runtime.Scripts.Patterns.MVC.Service;
 using Zenject;
 
-namespace FrameworkCore.Patterns.MVC.Controller
+namespace Runtime.Scripts.Patterns.MVC.Controller
 {
 
   

@@ -1,5 +1,5 @@
 ﻿#pragma warning disable 0649
-namespace FrameworkCore.Utils.Parse
+namespace Runtime.Scripts.Utils.Parse
 {
     public static class TimeUtils
     {

@@ -2,7 +2,7 @@
 
 #pragma warning disable 0649
 
-namespace FrameworkCore.Utils.Array
+namespace Runtime.Scripts.Utils.Array
 {
     public static class ArrayUtils
     {

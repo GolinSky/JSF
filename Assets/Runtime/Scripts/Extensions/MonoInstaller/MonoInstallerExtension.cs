@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace FrameworkCore.Extensions.MonoInstaller
+namespace Runtime.Scripts.Extensions.MonoInstaller
 {
     public static class MonoInstallerExtension 
     {

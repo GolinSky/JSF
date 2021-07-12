@@ -1,8 +1,8 @@
-using FrameworkCore.Patterns.MVC.Controller;
+using Runtime.Scripts.Patterns.MVC.Controller;
 using UnityEngine;
 using Zenject;
 
-namespace FrameworkCore.Patterns.MVC.View
+namespace Runtime.Scripts.Patterns.MVC.View
 {
     public abstract class View : MonoBehaviour
     {

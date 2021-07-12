@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace FrameworkCore.Utils.Parse
+namespace Runtime.Scripts.Utils.Parse
 {
     public static class DebugUtils
     {

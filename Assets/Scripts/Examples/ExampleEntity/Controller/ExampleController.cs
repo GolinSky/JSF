@@ -1,12 +1,12 @@
-﻿using FrameworkCore.BaseServices.SceneService.Service;
-using FrameworkCore.Examples.ExampleEntity.Service;
-using FrameworkCore.Examples.ExampleEntity.View;
-using FrameworkCore.Patterns.MVC.Controller;
-using FrameworkCore.Patterns.MVC.Factory;
+﻿using Examples.ExampleEntity.Service;
+using Examples.ExampleEntity.View;
+using Runtime.Scripts.BaseServices.SceneService.Service;
+using Runtime.Scripts.Patterns.MVC.Controller;
+using Runtime.Scripts.Patterns.MVC.Factory;
 using UnityEngine;
 using Zenject;
 
-namespace FrameworkCore.Examples.ExampleEntity.Controller
+namespace Examples.ExampleEntity.Controller
 {
     public class ExampleController : Controller<ExampleView, ExampleServiceLayer>
     {
@@ -18,6 +18,7 @@ namespace FrameworkCore.Examples.ExampleEntity.Controller
         public ExampleController(ExampleView view, ILevelService levelService, IServiceFactory serviceFactory) : base(view, serviceFactory)
         {
             this.levelService = levelService;
+            View.SetContext(ExampleMessage);
         }
 
         public override void Execute()

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using FrameworkCore.Utils.String;
+using Runtime.Scripts.Utils.String;
 
-namespace FrameworkCore.Utils.Parse
+namespace Runtime.Scripts.Utils.Parse
 {
     public static class ParseUtil 
     {

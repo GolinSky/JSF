@@ -1,9 +1,9 @@
-using FrameworkCore.BaseServices.ModelService.Service;
-using FrameworkCore.BaseServices.SceneService.Service;
-using FrameworkCore.Patterns.MVC.Factory;
+using Runtime.Scripts.BaseServices.ModelService.Service;
+using Runtime.Scripts.BaseServices.SceneService.Service;
+using Runtime.Scripts.Patterns.MVC.Factory;
 using Zenject;
 
-namespace FrameworkCore.ContextEntity.Project.Installer
+namespace Runtime.Scripts.ContextEntity.Project.Installer
 {
     public class ProjectInstaller : MonoInstaller
     {

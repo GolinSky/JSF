@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace FrameworkCore.BaseServices.EntryPointServices
+namespace Runtime.Scripts.BaseServices.EntryPointServices
 {
     public class EntryPoint 
     {

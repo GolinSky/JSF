@@ -1,7 +1,7 @@
-using FrameworkCore.BaseServices.SceneService.Controller;
+using Runtime.Scripts.BaseServices.SceneService.Controller;
 using Zenject;
 
-namespace FrameworkCore.ContextEntity.Scene.Loading
+namespace Examples.ContextEntity.Scene.Loading
 {
     public class LoadingInstaller : MonoInstaller
     {

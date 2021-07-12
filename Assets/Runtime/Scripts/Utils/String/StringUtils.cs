@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace FrameworkCore.Utils.String
+namespace Runtime.Scripts.Utils.String
 {
     public static class StringUtils
     {

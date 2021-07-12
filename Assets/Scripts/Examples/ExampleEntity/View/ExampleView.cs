@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+﻿using Runtime.Scripts.Patterns.MVC.View;
+using UnityEngine;
 using UnityEngine.UI;
 
-namespace FrameworkCore.Examples.ExampleEntity.View
+namespace Examples.ExampleEntity.View
 {
-    public class ExampleView : Patterns.MVC.View.View<string>
+    public class ExampleView : View<string>
     {
         [SerializeField] private Text text;
     

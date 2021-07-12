@@ -6,7 +6,7 @@ using UnityEngine;
 #if UNITY_EDITOR
 #endif
 
-namespace FrameworkCore.Utils.Scene
+namespace Runtime.Scripts.Utils.Scene
 {
 
 // Author: JohannesMP (2018-08-12)

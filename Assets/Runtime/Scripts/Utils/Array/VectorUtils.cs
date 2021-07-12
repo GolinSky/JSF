@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace FrameworkCore.Utils.Array
+namespace Runtime.Scripts.Utils.Array
 {
     public static class VectorUtils
     {

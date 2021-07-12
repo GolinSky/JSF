@@ -1,4 +1,4 @@
-﻿namespace FrameworkCore.Patterns.Observer
+﻿namespace Runtime.Scripts.Patterns.Observer
 {
     public interface ICustomObservable<T>
     {

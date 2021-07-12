@@ -1,12 +1,12 @@
-﻿using FrameworkCore.Examples.ExampleEntity.Controller;
-using FrameworkCore.Examples.ExampleEntity.View;
-using FrameworkCore.Extensions.MonoInstaller;
-using FrameworkCore.Patterns.MVC.Controller;
-using FrameworkCore.Utils.Ui.Fps;
+﻿using Examples.ExampleEntity.Controller;
+using Examples.ExampleEntity.View;
+using Runtime.Scripts.Extensions.MonoInstaller;
+using Runtime.Scripts.Patterns.MVC.Controller;
+using Runtime.Scripts.Utils.Ui.Fps;
 using UnityEngine;
 using Zenject;
 
-namespace FrameworkCore.ContextEntity.Scene.Example
+namespace Examples.ContextEntity.Scene.Example
 {
     public class ExampleInstaller : MonoInstaller
     {

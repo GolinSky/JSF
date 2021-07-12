@@ -1,4 +1,4 @@
-namespace FrameworkCore.Patterns.MVC.Model
+namespace Runtime.Scripts.Patterns.MVC.Model
 {
     public interface IModel
     {

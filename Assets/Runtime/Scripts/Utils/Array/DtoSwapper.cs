@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace FrameworkCore.Utils.Array
+namespace Runtime.Scripts.Utils.Array
 {
     public class DtoSwapper<T> 
     {

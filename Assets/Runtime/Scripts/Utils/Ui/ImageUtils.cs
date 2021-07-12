@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace FrameworkCore.Utils.Ui
+namespace Runtime.Scripts.Utils.Ui
 {
     public static class ImageUtils 
     {

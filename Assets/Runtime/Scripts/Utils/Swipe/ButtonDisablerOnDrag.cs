@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace FrameworkCore.Utils.Swipe
+namespace Runtime.Scripts.Utils.Swipe
 {
     public class ButtonDisablerOnDrag : MonoBehaviour
     {

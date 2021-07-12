@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using UnityEngine;
 
-namespace FrameworkCore.Utils.Animator.View
+namespace Runtime.Scripts.Utils.Animator.View
 {
     public class AnimatorStateView : StateMachineBehaviour
     {

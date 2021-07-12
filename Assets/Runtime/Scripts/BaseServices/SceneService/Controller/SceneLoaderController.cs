@@ -1,8 +1,8 @@
-﻿using FrameworkCore.BaseServices.SceneService.Service;
-using FrameworkCore.Patterns.MVC.Controller;
+﻿using Runtime.Scripts.BaseServices.SceneService.Service;
+using Runtime.Scripts.Patterns.MVC.Controller;
 using UnityEngine;
 
-namespace FrameworkCore.BaseServices.SceneService.Controller
+namespace Runtime.Scripts.BaseServices.SceneService.Controller
 {
     public class SceneLoaderController : UpdateController
     {

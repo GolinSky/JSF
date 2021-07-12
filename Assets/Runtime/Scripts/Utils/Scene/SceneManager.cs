@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace FrameworkCore.Utils.Scene
+namespace Runtime.Scripts.Utils.Scene
 {
     public static class SceneTools
     {

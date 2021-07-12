@@ -1,10 +1,10 @@
 ﻿using EventHandlerUtils;
-using FrameworkCore.BaseServices.ModelService.Service;
-using FrameworkCore.BaseServices.SceneService.Model;
-using FrameworkCore.Utils.Scene;
+using Runtime.Scripts.BaseServices.ModelService.Service;
+using Runtime.Scripts.BaseServices.SceneService.Model;
+using Runtime.Scripts.Utils.Scene;
 using UnityEngine;
 
-namespace FrameworkCore.BaseServices.SceneService.Service
+namespace Runtime.Scripts.BaseServices.SceneService.Service
 {
     public class LevelService:ILevelService
     {

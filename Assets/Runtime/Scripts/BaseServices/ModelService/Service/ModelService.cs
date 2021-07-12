@@ -1,11 +1,11 @@
-﻿using FrameworkCore.BaseServices.ModelService.Model;
-using FrameworkCore.ConfigurationService;
-using FrameworkCore.Patterns.MVC.Model;
+﻿using Runtime.Scripts.BaseServices.ModelService.Model;
+using Runtime.Scripts.ConfigurationService;
+using Runtime.Scripts.Patterns.MVC.Model;
 using UnityEngine;
 
 #pragma warning disable 0649
 
-namespace FrameworkCore.BaseServices.ModelService.Service
+namespace Runtime.Scripts.BaseServices.ModelService.Service
 {
     public class ModelService:IModelService
     {

@@ -1,4 +1,4 @@
-﻿namespace FrameworkCore.Patterns.MVC.Controller
+﻿namespace Runtime.Scripts.Patterns.MVC.Controller
 {
     public interface IController
     {

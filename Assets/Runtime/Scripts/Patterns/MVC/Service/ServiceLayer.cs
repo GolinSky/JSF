@@ -1,9 +1,9 @@
 using EventHandlerUtils;
-using FrameworkCore.BaseServices.ModelService.Service;
-using FrameworkCore.BaseServices.SceneService.Service;
-using FrameworkCore.Patterns.MVC.Model;
+using Runtime.Scripts.BaseServices.ModelService.Service;
+using Runtime.Scripts.BaseServices.SceneService.Service;
+using Runtime.Scripts.Patterns.MVC.Model;
 
-namespace FrameworkCore.Patterns.MVC.Service
+namespace Runtime.Scripts.Patterns.MVC.Service
 {
     public abstract class ServiceLayer<MODEL, DTO, CONTEXT> : ServiceLayer<DTO,CONTEXT> where MODEL : IModel
     {

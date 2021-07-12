@@ -1,4 +1,4 @@
-﻿namespace FrameworkCore.ConfigurationService
+﻿namespace Runtime.Scripts.ConfigurationService
 {
     public class Configuration
     {

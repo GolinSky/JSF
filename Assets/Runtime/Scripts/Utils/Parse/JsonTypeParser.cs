@@ -1,4 +1,4 @@
-﻿namespace FrameworkCore.Utils.Parse
+﻿namespace Runtime.Scripts.Utils.Parse
 {
     public class JsonTypeParser<T> where T:struct
     {

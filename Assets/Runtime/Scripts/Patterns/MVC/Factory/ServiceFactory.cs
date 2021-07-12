@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
-using FrameworkCore.BaseServices.ModelService.Service;
-using FrameworkCore.BaseServices.SceneService.Service;
-using FrameworkCore.Patterns.MVC.Service;
+using Runtime.Scripts.BaseServices.ModelService.Service;
+using Runtime.Scripts.BaseServices.SceneService.Service;
+using Runtime.Scripts.Patterns.MVC.Service;
 using Zenject;
 
-namespace FrameworkCore.Patterns.MVC.Factory
+namespace Runtime.Scripts.Patterns.MVC.Factory
 {
     public class ServiceFactory : IServiceFactory
     {

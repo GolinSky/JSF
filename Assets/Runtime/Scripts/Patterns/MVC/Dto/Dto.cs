@@ -1,4 +1,4 @@
-namespace FrameworkCore.Patterns.MVC.Dto
+namespace Runtime.Scripts.Patterns.MVC.Dto
 {
     public abstract class Dto
     {

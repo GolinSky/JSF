@@ -1,10 +1,10 @@
-﻿using FrameworkCore.Patterns.MVC.View;
+﻿using Runtime.Scripts.Patterns.MVC.View;
 using UnityEngine;
 using UnityEngine.UI;
 
 #pragma warning disable 0649
 
-namespace FrameworkCore.Utils.Ui.Fps
+namespace Runtime.Scripts.Utils.Ui.Fps
 {
     public class FpsCounterView : View<string>
     {

@@ -1,9 +1,9 @@
-﻿using FrameworkCore.BaseServices.ModelService.Service;
-using FrameworkCore.BaseServices.SceneService.Model;
-using FrameworkCore.BaseServices.SceneService.Service;
-using FrameworkCore.Patterns.MVC.Service;
+﻿using Runtime.Scripts.BaseServices.ModelService.Service;
+using Runtime.Scripts.BaseServices.SceneService.Model;
+using Runtime.Scripts.BaseServices.SceneService.Service;
+using Runtime.Scripts.Patterns.MVC.Service;
 
-namespace FrameworkCore.Examples.ExampleEntity.Service
+namespace Examples.ExampleEntity.Service
 {
     public class ExampleServiceLayer : ServiceLayer<LevelModel, bool, string>
     {
