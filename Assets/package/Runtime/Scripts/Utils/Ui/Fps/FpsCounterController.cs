@@ -1,9 +1,8 @@
 ﻿using System.Globalization;
-using Runtime.Scripts.Patterns.MVC.Controller;
-using Runtime.Scripts.Patterns.MVC.Factory;
-using UnityEngine;
+using UnityEngine.Package.Runtime.Scripts.Patterns.MVC.Controller;
+using UnityEngine.Package.Runtime.Scripts.Patterns.MVC.Factory;
 
-namespace Runtime.Scripts.Utils.Ui.Fps
+namespace UnityEngine.Package.Runtime.Scripts.Utils.Ui.Fps
 {
     public class FpsCounterController : Controller<FpsCounterView>
     {

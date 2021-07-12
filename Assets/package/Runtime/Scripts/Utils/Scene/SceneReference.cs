@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
-using UnityEngine;
 
 #if UNITY_EDITOR
 #endif
 
-namespace Runtime.Scripts.Utils.Scene
+namespace UnityEngine.Package.Runtime.Scripts.Utils.Scene
 {
 
 // Author: JohannesMP (2018-08-12)

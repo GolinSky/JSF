@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace Runtime.Scripts.Utils.Parse
+namespace UnityEngine.Package.Runtime.Scripts.Utils.Parse
 {
     public static class RegexService
     {

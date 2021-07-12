@@ -1,12 +1,11 @@
-﻿using Examples.ExampleEntity.Controller;
-using Examples.ExampleEntity.View;
-using Runtime.Scripts.Extensions.MonoInstaller;
-using Runtime.Scripts.Patterns.MVC.Controller;
-using Runtime.Scripts.Utils.Ui.Fps;
-using UnityEngine;
+﻿using UnityEngine.Examples.ExampleEntity.Controller;
+using UnityEngine.Examples.ExampleEntity.View;
+using UnityEngine.Package.Runtime.Scripts.Extensions.MonoInstaller;
+using UnityEngine.Package.Runtime.Scripts.Patterns.MVC.Controller;
+using UnityEngine.Package.Runtime.Scripts.Utils.Ui.Fps;
 using Zenject;
 
-namespace Examples.ContextEntity.Scene.Example
+namespace UnityEngine.Examples.ContextEntity.Scene.Example
 {
     public class ExampleInstaller : MonoInstaller
     {

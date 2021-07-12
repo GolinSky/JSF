@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace Runtime.Scripts.Utils.Array
+﻿namespace UnityEngine.Package.Runtime.Scripts.Utils.Array
 {
     public static class VectorUtils
     {

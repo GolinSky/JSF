@@ -1,8 +1,8 @@
-using Runtime.Scripts.Patterns.MVC.Factory;
-using Runtime.Scripts.Patterns.MVC.Service;
+using UnityEngine.Package.Runtime.Scripts.Patterns.MVC.Factory;
+using UnityEngine.Package.Runtime.Scripts.Patterns.MVC.Service;
 using Zenject;
 
-namespace Runtime.Scripts.Patterns.MVC.Controller
+namespace UnityEngine.Package.Runtime.Scripts.Patterns.MVC.Controller
 {
 
   

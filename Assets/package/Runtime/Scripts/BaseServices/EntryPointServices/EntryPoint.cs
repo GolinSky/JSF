@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace Runtime.Scripts.BaseServices.EntryPointServices
+﻿namespace UnityEngine.Package.Runtime.Scripts.BaseServices.EntryPointServices
 {
     public class EntryPoint 
     {

@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Runtime.Scripts.Utils.Parse;
-using UnityEngine;
 
-namespace Runtime.Scripts.Utils.Array
+namespace UnityEngine.Package.Runtime.Scripts.Utils.Array
 {
     [Serializable]
     public class DataList<Value, InternalValue, Id> where Value : InternalData<Id, InternalValue>

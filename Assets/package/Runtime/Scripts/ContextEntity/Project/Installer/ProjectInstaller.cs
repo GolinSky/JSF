@@ -1,9 +1,9 @@
-using Runtime.Scripts.BaseServices.ModelService.Service;
-using Runtime.Scripts.BaseServices.SceneService.Service;
-using Runtime.Scripts.Patterns.MVC.Factory;
+using UnityEngine.Package.Runtime.Scripts.BaseServices.ModelService.Service;
+using UnityEngine.Package.Runtime.Scripts.BaseServices.SceneService.Service;
+using UnityEngine.Package.Runtime.Scripts.Patterns.MVC.Factory;
 using Zenject;
 
-namespace Runtime.Scripts.ContextEntity.Project.Installer
+namespace UnityEngine.Package.Runtime.Scripts.ContextEntity.Project.Installer
 {
     public class ProjectInstaller : MonoInstaller
     {

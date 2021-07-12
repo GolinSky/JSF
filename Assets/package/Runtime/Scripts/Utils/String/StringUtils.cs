@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace Runtime.Scripts.Utils.String
+namespace UnityEngine.Package.Runtime.Scripts.Utils.String
 {
     public static class StringUtils
     {

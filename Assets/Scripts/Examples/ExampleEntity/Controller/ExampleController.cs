@@ -1,12 +1,11 @@
-﻿using Examples.ExampleEntity.Service;
-using Examples.ExampleEntity.View;
-using Runtime.Scripts.BaseServices.SceneService.Service;
-using Runtime.Scripts.Patterns.MVC.Controller;
-using Runtime.Scripts.Patterns.MVC.Factory;
-using UnityEngine;
+﻿using UnityEngine.Examples.ExampleEntity.Service;
+using UnityEngine.Examples.ExampleEntity.View;
+using UnityEngine.Package.Runtime.Scripts.BaseServices.SceneService.Service;
+using UnityEngine.Package.Runtime.Scripts.Patterns.MVC.Controller;
+using UnityEngine.Package.Runtime.Scripts.Patterns.MVC.Factory;
 using Zenject;
 
-namespace Examples.ExampleEntity.Controller
+namespace UnityEngine.Examples.ExampleEntity.Controller
 {
     public class ExampleController : Controller<ExampleView, ExampleServiceLayer>
     {

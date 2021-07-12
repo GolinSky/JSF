@@ -1,8 +1,7 @@
-using Runtime.Scripts.Patterns.MVC.Controller;
-using UnityEngine;
+using UnityEngine.Package.Runtime.Scripts.Patterns.MVC.Controller;
 using Zenject;
 
-namespace Runtime.Scripts.Patterns.MVC.View
+namespace UnityEngine.Package.Runtime.Scripts.Patterns.MVC.View
 {
     public abstract class View : MonoBehaviour
     {

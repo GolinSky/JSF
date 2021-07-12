@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace Runtime.Scripts.Utils.Parse
+﻿namespace UnityEngine.Package.Runtime.Scripts.Utils.Parse
 {
     public static class DebugUtils
     {

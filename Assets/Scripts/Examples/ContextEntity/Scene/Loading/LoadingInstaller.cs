@@ -1,7 +1,7 @@
-using Runtime.Scripts.BaseServices.SceneService.Controller;
+using UnityEngine.Package.Runtime.Scripts.BaseServices.SceneService.Controller;
 using Zenject;
 
-namespace Examples.ContextEntity.Scene.Loading
+namespace UnityEngine.Examples.ContextEntity.Scene.Loading
 {
     public class LoadingInstaller : MonoInstaller
     {

@@ -1,8 +1,7 @@
 ﻿using System;
-using UnityEngine;
 using UnityEngine.UI;
 
-namespace Runtime.Scripts.Utils.Ui
+namespace UnityEngine.Package.Runtime.Scripts.Utils.Ui
 {
     [Serializable]
     public class ButtonUtils<T> where T : struct

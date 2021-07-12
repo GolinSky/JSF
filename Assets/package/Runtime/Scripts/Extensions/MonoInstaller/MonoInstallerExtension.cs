@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace Runtime.Scripts.Extensions.MonoInstaller
+﻿namespace UnityEngine.Package.Runtime.Scripts.Extensions.MonoInstaller
 {
     public static class MonoInstallerExtension 
     {

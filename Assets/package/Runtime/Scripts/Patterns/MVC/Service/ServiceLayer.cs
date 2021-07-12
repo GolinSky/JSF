@@ -1,9 +1,9 @@
 using EventHandlerUtils;
-using Runtime.Scripts.BaseServices.ModelService.Service;
-using Runtime.Scripts.BaseServices.SceneService.Service;
-using Runtime.Scripts.Patterns.MVC.Model;
+using UnityEngine.Package.Runtime.Scripts.BaseServices.ModelService.Service;
+using UnityEngine.Package.Runtime.Scripts.BaseServices.SceneService.Service;
+using UnityEngine.Package.Runtime.Scripts.Patterns.MVC.Model;
 
-namespace Runtime.Scripts.Patterns.MVC.Service
+namespace UnityEngine.Package.Runtime.Scripts.Patterns.MVC.Service
 {
     public abstract class ServiceLayer<MODEL, DTO, CONTEXT> : ServiceLayer<DTO,CONTEXT> where MODEL : IModel
     {

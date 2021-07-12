@@ -1,8 +1,8 @@
 using EventHandlerUtils;
-using Runtime.Scripts.BaseServices.ModelService.Service;
-using Runtime.Scripts.BaseServices.SceneService.Service;
+using UnityEngine.Package.Runtime.Scripts.BaseServices.ModelService.Service;
+using UnityEngine.Package.Runtime.Scripts.BaseServices.SceneService.Service;
 
-namespace Runtime.Scripts.Patterns.MVC.Service
+namespace UnityEngine.Package.Runtime.Scripts.Patterns.MVC.Service
 {
     public abstract class BaseServiceLayer
     {

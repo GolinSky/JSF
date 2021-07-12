@@ -1,11 +1,10 @@
-﻿using Runtime.Scripts.BaseServices.ModelService.Model;
-using Runtime.Scripts.ConfigurationService;
-using Runtime.Scripts.Patterns.MVC.Model;
-using UnityEngine;
+﻿using UnityEngine.Package.Runtime.Scripts.BaseServices.ModelService.Model;
+using UnityEngine.Package.Runtime.Scripts.ConfigurationService;
+using UnityEngine.Package.Runtime.Scripts.Patterns.MVC.Model;
 
 #pragma warning disable 0649
 
-namespace Runtime.Scripts.BaseServices.ModelService.Service
+namespace UnityEngine.Package.Runtime.Scripts.BaseServices.ModelService.Service
 {
     public class ModelService:IModelService
     {

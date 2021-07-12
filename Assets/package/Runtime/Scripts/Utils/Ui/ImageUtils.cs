@@ -1,7 +1,6 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine.UI;
 
-namespace Runtime.Scripts.Utils.Ui
+namespace UnityEngine.Package.Runtime.Scripts.Utils.Ui
 {
     public static class ImageUtils 
     {

@@ -1,13 +1,12 @@
 ﻿using System;
-using Runtime.Scripts.BaseServices.SceneService.Service;
-using Runtime.Scripts.Patterns.MVC.Model;
-using Runtime.Scripts.Utils.Array;
-using Runtime.Scripts.Utils.Scene;
-using UnityEngine;
+using UnityEngine.Package.Runtime.Scripts.BaseServices.SceneService.Service;
+using UnityEngine.Package.Runtime.Scripts.Patterns.MVC.Model;
+using UnityEngine.Package.Runtime.Scripts.Utils.Array;
+using UnityEngine.Package.Runtime.Scripts.Utils.Scene;
 
 #pragma warning disable 0649
 
-namespace Runtime.Scripts.BaseServices.SceneService.Model
+namespace UnityEngine.Package.Runtime.Scripts.BaseServices.SceneService.Model
 {
     [Serializable]
     [CreateAssetMenu(fileName = "LevelModel", menuName = "Model/LevelModel")]

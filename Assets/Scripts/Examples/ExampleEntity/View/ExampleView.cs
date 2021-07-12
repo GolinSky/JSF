@@ -1,8 +1,7 @@
-﻿using Runtime.Scripts.Patterns.MVC.View;
-using UnityEngine;
+﻿using UnityEngine.Package.Runtime.Scripts.Patterns.MVC.View;
 using UnityEngine.UI;
 
-namespace Examples.ExampleEntity.View
+namespace UnityEngine.Examples.ExampleEntity.View
 {
     public class ExampleView : View<string>
     {

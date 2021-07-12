@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using Runtime.Scripts.BaseServices.SceneService.Service;
-using UnityEngine;
+using UnityEngine.Package.Runtime.Scripts.BaseServices.SceneService.Service;
 using Zenject;
 
-namespace Runtime.Scripts.Utils.State
+namespace UnityEngine.Package.Runtime.Scripts.Utils.State
 {
     public class SceneComponentResolver : MonoBehaviour
     {

@@ -1,4 +1,4 @@
-﻿namespace Runtime.Scripts.Patterns.MVC.Controller
+﻿namespace UnityEngine.Package.Runtime.Scripts.Patterns.MVC.Controller
 {
     public interface IController
     {

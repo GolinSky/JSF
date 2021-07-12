@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Runtime.Scripts.Utils.String;
+using UnityEngine.Package.Runtime.Scripts.Utils.String;
 
-namespace Runtime.Scripts.Utils.Parse
+namespace UnityEngine.Package.Runtime.Scripts.Utils.Parse
 {
     public static class ParseUtil 
     {
