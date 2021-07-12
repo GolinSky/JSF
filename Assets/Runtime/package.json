@@ -1,6 +1,6 @@
 {
   "name": "com.custom.mvcframework",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "displayName": "Unity Framework Package",
   "description": "This is an package which included mvc, zenject",
   "unity": "2019.4",
