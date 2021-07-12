@@ -8,5 +8,9 @@
     "name": "Alexandr Holinskiy",
     "email": "golinsky97@gmail.com",
     "url": "https://GolinSky@bitbucket.org/GolinSky/unity-core-system.git"
+  },
+
+  "dependencies": {
+    "com.mathijsbakker.extenject": "9.2.0"
   }
 }
