@@ -1,5 +1,6 @@
 ﻿using UnityEngine.Examples.ExampleEntity.Service;
 using UnityEngine.Examples.ExampleEntity.View;
+using UnityEngine.LevelEntity.Service;
 using UnityEngine.MyPackage.Runtime.Scripts.BaseServices.SceneService.Service;
 using UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Controller;
 using UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Factory;

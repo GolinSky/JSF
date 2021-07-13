@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Model;
 using UnityEngine.MyPackage.Runtime.Scripts.Utils.Parse;
 
 namespace UnityEngine.MyPackage.Runtime.Scripts.Utils.Array

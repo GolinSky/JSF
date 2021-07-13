@@ -7,7 +7,7 @@ namespace UnityEngine.MyPackage.Runtime.Scripts.BaseServices.SceneService.Contro
     {
         private AsyncOperation asyncOperation;
         private const float ProgressValue = 0.89f;
-        public SceneLoaderController(ILevelService levelService) 
+        public SceneLoaderController(ILoadAsync levelService) 
         {
             asyncOperation = levelService.LoadSceneAsync();
             asyncOperation.allowSceneActivation = false;   
