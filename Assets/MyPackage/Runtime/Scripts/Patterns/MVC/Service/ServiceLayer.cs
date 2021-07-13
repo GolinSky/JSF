@@ -30,7 +30,7 @@ namespace UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Service
     
     public abstract class ServiceLayer<Dto, Context> : BaseServiceLayer
     {
-        public override SceneType ResetScene => SceneType.Unset;
+        // public override SceneType ResetScene => SceneType.Unset;
 
         //todo: abstract getter on some scene reset 
         //todo: impl class must store additional methods and some needed state for other modules

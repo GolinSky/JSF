@@ -16,7 +16,7 @@ namespace UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Service
 
         public abstract bool IsInited { get; }
         
-        public abstract SceneType ResetScene { get; }
+        // public abstract SceneType ResetScene { get; }
 
         public abstract void Reset();
 

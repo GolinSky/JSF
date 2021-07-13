@@ -34,22 +34,22 @@ namespace UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Factory
         }
 
 
-        public void ResetLayers(SceneType sceneType)
-        {
-            foreach (var serviceLayer in ServiceDictionary.Values)
-            {
-                if (serviceLayer.ResetScene == sceneType)
-                {
-                    serviceLayer.Reset();
-                }
-            }
-        }
+        // public void ResetLayers(SceneType sceneType)
+        // {
+        //     foreach (var serviceLayer in ServiceDictionary.Values)
+        //     {
+        //         if (serviceLayer.ResetScene == sceneType)
+        //         {
+        //             serviceLayer.Reset();
+        //         }
+        //     }
+        // }
     }
 
 
     public interface IServiceFactory
     {
         T GetService<T>() where T : BaseServiceLayer;
-        void ResetLayers(SceneType sceneType);
+       // void ResetLayers(SceneType sceneType);
     }
 }
