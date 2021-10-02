@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Dto;
 using UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Model;
 
 #pragma warning disable 0649
 
 namespace UnityEngine.MyPackage.Runtime.Scripts.BaseServices.ModelService.Model
 {
+
     [Serializable]
-    public class Data<V>:ScriptableObject where V : Dto
+    [CreateAssetMenu(fileName = "GameModel", menuName = "Model/GameModel")]
+    public class GameModel : ScriptableObject
     {
         [SerializeField] protected List<ModelPreset> modelList;
 
@@ -31,13 +32,7 @@ namespace UnityEngine.MyPackage.Runtime.Scripts.BaseServices.ModelService.Model
         {
             return (T) ModelDictionary[typeof(T)];
         }
-    }
-
-    [Serializable]
-    [CreateAssetMenu(fileName = "GameModel", menuName = "Model/GameModel")]
-    public class GameModel : Data<Dto>
-    {
-
+        
     }
 
     [Serializable]
@@ -65,4 +60,5 @@ namespace UnityEngine.MyPackage.Runtime.Scripts.BaseServices.ModelService.Model
             }
         }
     }
+  
 }
