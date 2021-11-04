@@ -1,4 +1,4 @@
-﻿using UnityEngine.LevelEntity.Model;
+﻿using UnityEngine.Examples.LevelEntity.Model;
 using UnityEngine.MyPackage.Runtime.Scripts.BaseServices.ModelService.Service;
 using UnityEngine.MyPackage.Runtime.Scripts.BaseServices.SceneService.Model;
 using UnityEngine.MyPackage.Runtime.Scripts.BaseServices.SceneService.Service;

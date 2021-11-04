@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main/Example.unity
     guid: 2e476e34031b95a4eb27b7f54fb50784
+  - enabled: 1
+    path: Assets/Scenes/Main/RestTemplate.unity
+    guid: 35ddbb23f5bd206468bfbf0c6c193cee
+  - enabled: 1
+    path: Assets/Scenes/Main/NavigationScene.unity
+    guid: d3b6dd6d058e2ae4fabe5f73534aafe4
   m_configObjects: {}

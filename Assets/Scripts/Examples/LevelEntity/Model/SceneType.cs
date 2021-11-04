@@ -5,5 +5,7 @@
         Unset = -1,
         Loading = 0,
         Example = 9999,
+        Navigation = 2,
+        RestTemplate = 3,
     }
 }

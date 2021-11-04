@@ -1,4 +1,4 @@
-﻿using UnityEngine.LevelEntity.Model;
+﻿using UnityEngine.Examples.LevelEntity.Model;
 using UnityEngine.MyPackage.Runtime.Scripts.BaseServices.ModelService.Service;
 using UnityEngine.MyPackage.Runtime.Scripts.BaseServices.SceneService.Service;
 using UnityEngine.MyPackage.Runtime.Scripts.Utils.Scene;
@@ -15,7 +15,7 @@ namespace UnityEngine.LevelEntity.Service
             LoadScene(EntryScene);
         }
 
-        protected override SceneType EntryScene => SceneType.Example;
+        protected override SceneType EntryScene => SceneType.Navigation;
         public override AsyncOperation LoadSceneAsync()
         {
             return SceneTools.LoadSceneAsync(LevelModel.GetByType(CurrentScene));

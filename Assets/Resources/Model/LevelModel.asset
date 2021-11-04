@@ -21,3 +21,11 @@ MonoBehaviour:
     value:
       sceneAsset: {fileID: 102900000, guid: 2e476e34031b95a4eb27b7f54fb50784, type: 3}
       scenePath: Assets/Scenes/Main/Example.unity
+  - id: 2
+    value:
+      sceneAsset: {fileID: 102900000, guid: d3b6dd6d058e2ae4fabe5f73534aafe4, type: 3}
+      scenePath: Assets/Scenes/Main/NavigationScene.unity
+  - id: 3
+    value:
+      sceneAsset: {fileID: 102900000, guid: 35ddbb23f5bd206468bfbf0c6c193cee, type: 3}
+      scenePath: Assets/Scenes/Main/RestTemplate.unity

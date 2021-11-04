@@ -6,11 +6,11 @@ namespace UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Service
 {
     public abstract class BaseServiceLayer
     {
-        protected readonly  IModelService modelService;
+        protected readonly  IModelService ModelService;
 
         protected BaseServiceLayer(IModelService modelService)
         {
-            this.modelService = modelService;
+            this.ModelService = modelService;
         }
         public Handler DtoHandler { get; protected set; } = new Handler();
 

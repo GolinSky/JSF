@@ -16,7 +16,7 @@ namespace UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Service
             {
                 if (model == null)
                 {
-                    model = modelService.GetModel<MODEL>();
+                    model = ModelService.GetModel<MODEL>();
                 }
 
                 return model;

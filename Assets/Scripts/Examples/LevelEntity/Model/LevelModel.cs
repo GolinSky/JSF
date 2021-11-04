@@ -6,7 +6,7 @@ using UnityEngine.MyPackage.Runtime.Scripts.Utils.Scene;
 
 #pragma warning disable 0649
 
-namespace UnityEngine.LevelEntity.Model
+namespace UnityEngine.Examples.LevelEntity.Model
 {
     [Serializable]
     [CreateAssetMenu(fileName = "LevelModel", menuName = "Model/LevelModel")]
