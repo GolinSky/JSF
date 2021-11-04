@@ -13,7 +13,7 @@ using Zenject;
 
 namespace UnityEngine.Examples.NavigationEntity.Controller
 {
-    public class NavigationController : Controller<NavigationView>
+    public sealed class NavigationController : Controller<NavigationView>
     {
         private const NavigationType ButtonType = NavigationType.USUAL_BUTTON;
 
