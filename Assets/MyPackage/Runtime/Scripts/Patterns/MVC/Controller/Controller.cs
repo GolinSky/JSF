@@ -23,6 +23,7 @@ namespace UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Controller
             View = view;
             this.serviceFactory = serviceFactory;
         }
+        
 
         public virtual void AddListeners(){}
         public virtual void RemoveListeners(){}
@@ -39,16 +40,21 @@ namespace UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Controller
             serviceLayer = serviceFactory.GetService<Layer>();
 
         }
-
-        public override void AddListeners()
+        
+        public sealed override void AddListeners()
         {
             serviceLayer.DtoHandler.AddListener(HandleServiceLayer);
+            AddInternalListeners();
         }
 
-        public override void RemoveListeners()
+        public sealed override void RemoveListeners()
         {
             RemoveServiceLayerListener();
+            RemoveInternalListeners();
         }
+        
+        protected virtual void AddInternalListeners(){}
+        protected virtual void RemoveInternalListeners(){}        
 
         protected abstract void HandleServiceLayer();
         
