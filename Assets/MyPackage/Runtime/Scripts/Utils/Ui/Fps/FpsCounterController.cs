@@ -10,7 +10,7 @@ namespace UnityEngine.MyPackage.Runtime.Scripts.Utils.Ui.Fps
         private const float DeltaTimeCoefficient = 0.1f;
         private float deltaTime = 0.0f;
 
-        public FpsCounterController(FpsCounterView view, IServiceFactory serviceFactory) : base(view, serviceFactory)
+        public FpsCounterController(FpsCounterView view) : base(view)
         {
         }
 

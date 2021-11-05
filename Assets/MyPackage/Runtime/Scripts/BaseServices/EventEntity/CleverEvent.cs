@@ -1,30 +1,38 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace UnityEngine.MyPackage.Runtime.Scripts.BaseServices.EventEntity
 {
-    public class CleverEvent
+    public class CleverEvent<T>
     {
-        private bool isInvoked;
+        private T subject;
+        private  List<Action<T>> Actions = new List<Action<T>>();
 
-        private event Action Actions;
-
-        public void AddListener(Action listenerAction)
+        public void AddListener(Action<T> listenerAction, bool waitForNextInvocation = false)
         {
-            Actions += listenerAction;
-            if (!isInvoked || listenerAction == null)
+            if (listenerAction == null)
                 return;
-            listenerAction();
+            
+            Actions.Add(listenerAction);
+            if (subject != null && !waitForNextInvocation)
+            {
+                listenerAction.Invoke(subject);
+            }
         }
 
-        public void RemoveListener(Action listenerAction) => Actions -= listenerAction;
+        public void RemoveListener(Action<T> listenerAction) => Actions.Remove(listenerAction);
 
-        public void Invoke()
+        public void Invoke(T value)
         {
+            if (value == null) return;
+         
+            subject = value;
+            
             if (Actions == null)
                 return;
         
-            isInvoked = true;
-            Actions.Invoke();
+            Actions.Where(x=>x!=null).ToList().ForEach(x=>x.Invoke(subject));
         }
 
         public void Reset()

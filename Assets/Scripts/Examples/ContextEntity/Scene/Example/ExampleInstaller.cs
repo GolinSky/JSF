@@ -1,7 +1,10 @@
 ﻿using UnityEngine.Examples.ExampleEntity.Controller;
+using UnityEngine.Examples.ExampleEntity.Service;
 using UnityEngine.Examples.ExampleEntity.View;
+using UnityEngine.MyPackage.Runtime.Scripts.BaseServices.SceneService.Service;
 using UnityEngine.MyPackage.Runtime.Scripts.Extensions.MonoInstaller;
 using UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Controller;
+using UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.ServiceLayer;
 using UnityEngine.MyPackage.Runtime.Scripts.Utils.Ui.Fps;
 using Zenject;
 
@@ -20,7 +23,14 @@ namespace UnityEngine.Examples.ContextEntity.Scene.Example
         
         public override void InstallBindings()
         {
-            Container.Bind<IController>()
+            Container.Bind(typeof(IContextLayer<string>), typeof(IDtoLayer<SceneType>))
+                .To<ExampleServiceLayer>()
+                .AsSingle()
+                .WhenInjectedInto<ExampleController>();
+                
+
+            
+                Container.Bind<IController>()
                 .To<ExampleController>()
                 .WithArguments(exampleView)
                 .WhenInjectedInto<ExampleView>();
@@ -29,6 +39,8 @@ namespace UnityEngine.Examples.ContextEntity.Scene.Example
                 .To<FpsCounterController>()
                 .WithArguments(fpsCounterView)
                 .WhenInjectedInto<FpsCounterView>();
+            
+            
 
         }
     }

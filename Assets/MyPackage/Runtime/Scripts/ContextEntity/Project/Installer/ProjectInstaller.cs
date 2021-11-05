@@ -11,7 +11,7 @@ namespace UnityEngine.MyPackage.Runtime.Scripts.ContextEntity.Project.Installer
         public override void InstallBindings()
         {
             Container.Bind<IModelService>().To<ModelService>().AsSingle().NonLazy();
-            Container.Bind<IServiceFactory>().To<ServiceFactory>().AsSingle().NonLazy();
+        //    Container.Bind<IServiceFactory>().To<ServiceFactory>().AsSingle().NonLazy();
           //  Container.Bind<ILevelService>().To<LevelService>().AsSingle().NonLazy();
         }
     }

@@ -23,7 +23,7 @@ namespace UnityEngine.Examples.NavigationEntity.Controller
         [Inject]
         private readonly ILevelService levelService;
 
-        public NavigationController(NavigationView view, IServiceFactory serviceFactory, IModelService modelService, IMonoBehaviourFactory<IButtonView<SceneType>,NavigationType, RectTransform> baseFactory) : base(view, serviceFactory)
+        public NavigationController(NavigationView view,   IModelService modelService, IMonoBehaviourFactory<IButtonView<SceneType>,NavigationType, RectTransform> baseFactory) : base(view)
         {
             var levelModel = modelService.GetModel<LevelModel>();
             var keys = levelModel.Keys.ToList(); 
