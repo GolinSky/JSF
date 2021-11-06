@@ -9,7 +9,7 @@ namespace UnityEngine.Examples.ExampleEntity.Controller
 {
     public class ExampleController : Controller<ExampleView, string>
     {
-        private const string ExampleMessage = "Hello World ";
+        private const string ExampleMessage = "Hello World";
         private readonly ILevelService levelService;
         private readonly IDtoLayer<SceneType> dtoLayer;
         private string context;
@@ -24,7 +24,7 @@ namespace UnityEngine.Examples.ExampleEntity.Controller
 
         protected override void HandleServiceLayer(string context)
         {
-            Debug.Log(ExampleMessage+context);
+            Debug.Log($"{ExampleMessage}: {context}");
             levelService.LoadScene(SceneType.Example);
         }
 
