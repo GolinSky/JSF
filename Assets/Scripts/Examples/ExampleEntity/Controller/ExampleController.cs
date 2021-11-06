@@ -7,7 +7,7 @@ using Zenject;
 
 namespace UnityEngine.Examples.ExampleEntity.Controller
 {
-    public class ExampleController : Controller<ExampleView, string, IContextLayer<string>>
+    public class ExampleController : Controller<ExampleView, string>
     {
         private const string ExampleMessage = "Hello World ";
         private readonly ILevelService levelService;
@@ -15,7 +15,7 @@ namespace UnityEngine.Examples.ExampleEntity.Controller
         private string context;
 
         [Inject]
-        public ExampleController(ExampleView view, ILevelService levelService,  IContextLayer<string> contextLayer, IDtoLayer<SceneType> dtoLayer) : base(view, contextLayer)
+        public ExampleController(ExampleView view, ILevelService levelService, IDtoLayer<SceneType> dtoLayer) : base(view)
         {
             this.levelService = levelService;
             this.dtoLayer = dtoLayer;

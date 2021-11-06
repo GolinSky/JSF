@@ -1,4 +1,3 @@
-using UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Factory;
 using UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.ServiceLayer;
 using Zenject;
 
@@ -9,6 +8,10 @@ namespace UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Controller
         public abstract void Tick();
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="T">View</typeparam>
     public abstract class Controller<T> : IController where T : View.View
     {
         protected T View { get; }
@@ -18,30 +21,26 @@ namespace UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Controller
         {
             View = view;
         }
+        
+        public virtual void AddListeners() {}
 
+        public virtual void RemoveListeners() {}
 
-        public virtual void AddListeners()
-        {
-        }
-
-        public virtual void RemoveListeners()
-        {
-        }
-
-        public virtual void Execute()
-        {
-        }
+        public virtual void Execute() {}
     }
-
-    public abstract class Controller<T, Context, ContextLayer> : Controller<T>
-        where T : View.View where ContextLayer : IContextLayer<Context>
+/// <summary>
+/// 
+/// </summary>
+/// <typeparam name="T">View</typeparam>
+/// <typeparam name="Context"> Context that will be taken from service layer</typeparam>
+    public abstract class Controller<T, Context> : Controller<T> where T : View.View 
     {
-        protected readonly ContextLayer contextLayer;
+        [Inject]
+        private readonly IContextLayer<Context> contextLayer;
 
         [Inject]
-        protected Controller(T view, ContextLayer contextLayer) : base(view)
+        protected Controller(T view) : base(view)
         {
-            this.contextLayer = contextLayer;
         }
 
         public sealed override void AddListeners()
@@ -57,7 +56,6 @@ namespace UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Controller
         }
 
         protected abstract void HandleServiceLayer(Context context);
-
         protected virtual void AddInternalListeners() {}
         protected virtual void RemoveInternalListeners() {}
 
