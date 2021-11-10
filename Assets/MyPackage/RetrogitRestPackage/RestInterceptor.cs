@@ -8,6 +8,7 @@ namespace Retrofit.Net
 {
     public class RestInterceptor : IInterceptor
     {
+        private const string QueryValue = "Execute";
         private IRestClient restClient;
 
         public RestInterceptor(IRestClient restClient)
@@ -26,7 +27,7 @@ namespace Retrofit.Net
             var genericTypeArgument = responseType.GenericTypeArguments[0];
             // We have to find the method manually due to limitations of GetMethod()
             var methods = restClient.GetType().GetMethods();
-            MethodInfo method = methods.Where(m => m.Name == "Execute").First(m => m.IsGenericMethod);
+            MethodInfo method = methods.Where(m => m.Name.Equals(QueryValue)).First(m => m.IsGenericMethod);
             MethodInfo generic = method.MakeGenericMethod(genericTypeArgument);
             invocation.ReturnValue =  generic.Invoke(restClient, new object[] { request });
 
