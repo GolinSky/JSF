@@ -1,20 +1,12 @@
-﻿using System;
+﻿using RestSharp;
+using Retrofit.Net.Attributes.Methods;
+using UnityEngine.Examples.RestTemplateEntity.Dto;
 
-
-namespace UnityEngine.Examples.RestTemplateEntity.Controller
+namespace UnityEngine.Examples.RestTemplateEntity.Rest
 {
-    public interface IHttpBinTemplateInterface 
+    public interface ITemplateRestService 
     {
-        // [Get("/get")]
-        // IObservable<HttpBinResponse> Get(
-        //     [Query("query1")]string arg1,
-        //     [Query("query2")]string arg2
-        // );
-    }
-
-
-    public class sdd
-    {
-    
+        [Get("uuid")]
+        RestResponse<TestDto> GetUId();
     }
 }

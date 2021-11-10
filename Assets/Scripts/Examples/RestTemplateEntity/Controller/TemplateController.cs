@@ -1,4 +1,8 @@
-﻿using UnityEngine.Examples.RestTemplateEntity.View;
+﻿using RestSharp;
+using Retrofit.Net;
+using UnityEngine.Examples.RestTemplateEntity.Dto;
+using UnityEngine.Examples.RestTemplateEntity.Rest;
+using UnityEngine.Examples.RestTemplateEntity.View;
 using UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Controller;
 
 namespace UnityEngine.Examples.RestTemplateEntity.Controller
@@ -8,10 +12,11 @@ namespace UnityEngine.Examples.RestTemplateEntity.Controller
         public TemplateController(RestTemplateView view) : base(view)
         {
             
-            // RetrofitAdapter adapter = new RetrofitAdapter.Builder()
-            //     .SetEndpoint("http://httpbin.org")
-            //     .Build();
-            // var httpService = adapter.Create<IHttpBinTemplateInterface>();
+            RestAdapter adapter = new RestAdapter("http://httpbin.org");
+            ITemplateRestService service = adapter.Create<ITemplateRestService>();
+            RestResponse<TestDto> personResponse = service.GetUId();
+            
+            Debug.Log(personResponse.Data);
         }
     }
 }
