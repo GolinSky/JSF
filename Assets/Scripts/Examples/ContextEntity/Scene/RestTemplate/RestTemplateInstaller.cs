@@ -1,4 +1,5 @@
 using UnityEngine.Examples.RestTemplateEntity.Controller;
+using UnityEngine.Examples.RestTemplateEntity.MiddleWare;
 using UnityEngine.Examples.RestTemplateEntity.Proxy;
 using UnityEngine.Examples.RestTemplateEntity.View;
 using UnityEngine.MyPackage.Runtime.Scripts.Extensions.MonoInstaller;
@@ -20,6 +21,11 @@ namespace UnityEngine.Examples.ContextEntity.Scene.RestTemplate
 
         public override void InstallBindings()
         {
+            Container.Bind<IServerModelMiddleWare>()
+                .To<RestTemplateMiddleWare>()
+                .AsSingle();
+
+
             Container.Bind<IProxy<IHttpContext>>()
                 .To<RestTemplateProxy>()
                 .WhenInjectedInto<TemplateController>();

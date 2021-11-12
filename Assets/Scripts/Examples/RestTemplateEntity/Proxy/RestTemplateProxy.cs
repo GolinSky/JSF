@@ -12,5 +12,9 @@ namespace UnityEngine.Examples.RestTemplateEntity.Proxy
             RestResponse<TestDto> personResponse = restService.GetUId();
             Debug.Log(personResponse.Data);
         }
+
+        public RestTemplateProxy(IServerModelMiddleWare serverModelMiddleWare) : base(serverModelMiddleWare)
+        {
+        }
     }
 }

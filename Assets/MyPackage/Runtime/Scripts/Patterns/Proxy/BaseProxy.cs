@@ -1,5 +1,4 @@
-﻿using JetBrains.Annotations;
-using Retrofit.Net;
+﻿using Retrofit.Net;
 
 namespace UnityEngine.MyPackage.Runtime.Scripts.Patterns.Proxy
 {
@@ -7,10 +6,9 @@ namespace UnityEngine.MyPackage.Runtime.Scripts.Patterns.Proxy
     {
         protected readonly V restService;
         private readonly RestAdapter adapter;
-
-        protected BaseProxy()
+        protected BaseProxy(IServerModelMiddleWare serverModelMiddleWare)
         {
-            adapter = new RestAdapter("http://httpbin.org");
+            adapter = new RestAdapter(serverModelMiddleWare.ServerUri.AbsoluteUri);
             restService = adapter.Create<V>();
         }
         
