@@ -1,22 +1,33 @@
-﻿using RestSharp;
-using Retrofit.Net;
-using UnityEngine.Examples.RestTemplateEntity.Dto;
-using UnityEngine.Examples.RestTemplateEntity.Rest;
-using UnityEngine.Examples.RestTemplateEntity.View;
+﻿using UnityEngine.Examples.RestTemplateEntity.View;
 using UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Controller;
+using UnityEngine.MyPackage.Runtime.Scripts.Patterns.Proxy;
+using Zenject;
 
 namespace UnityEngine.Examples.RestTemplateEntity.Controller
 {
     public class TemplateController : Controller<RestTemplateView>
     {
+        [Inject] private readonly IProxy<IHttpContext> proxy;
         public TemplateController(RestTemplateView view) : base(view)
         {
-            
-            RestAdapter adapter = new RestAdapter("http://httpbin.org");
-            ITemplateRestService service = adapter.Create<ITemplateRestService>();
-            RestResponse<TestDto> personResponse = service.GetUId();
-            
-            Debug.Log(personResponse.Data);
+        
+        }
+        
+        public override void AddListeners()
+        {
+            base.AddListeners();
+            View.AddListener(SendRequest);
+        }
+
+        public override void RemoveListeners()
+        {
+            base.RemoveListeners();
+            View.RemoveListener(SendRequest);
+        }
+
+        private void SendRequest()
+        {
+            proxy.Request(null);
         }
     }
 }

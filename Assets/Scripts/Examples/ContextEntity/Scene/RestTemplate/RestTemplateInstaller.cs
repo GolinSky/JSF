@@ -1,7 +1,9 @@
 using UnityEngine.Examples.RestTemplateEntity.Controller;
+using UnityEngine.Examples.RestTemplateEntity.Proxy;
 using UnityEngine.Examples.RestTemplateEntity.View;
 using UnityEngine.MyPackage.Runtime.Scripts.Extensions.MonoInstaller;
 using UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Controller;
+using UnityEngine.MyPackage.Runtime.Scripts.Patterns.Proxy;
 using Zenject;
 
 namespace UnityEngine.Examples.ContextEntity.Scene.RestTemplate
@@ -18,6 +20,10 @@ namespace UnityEngine.Examples.ContextEntity.Scene.RestTemplate
 
         public override void InstallBindings()
         {
+            Container.Bind<IProxy<IHttpContext>>()
+                .To<RestTemplateProxy>()
+                .WhenInjectedInto<TemplateController>();
+
             Container.Bind<IController>()
                 .To<TemplateController>()
                 .WithArguments(restTemplateView)

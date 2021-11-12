@@ -309,7 +309,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: GetId
 --- !u!222 &499022365
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -656,3 +656,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aca7f18a0aed0943aabeb06510842eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button: {fileID: 362630139}
