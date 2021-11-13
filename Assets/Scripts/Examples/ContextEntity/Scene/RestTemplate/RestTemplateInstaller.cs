@@ -25,7 +25,6 @@ namespace UnityEngine.Examples.ContextEntity.Scene.RestTemplate
                 .To<RestTemplateMiddleWare>()
                 .AsSingle();
 
-
             Container.Bind<IProxy<IHttpContext>>()
                 .To<RestTemplateProxy>()
                 .WhenInjectedInto<TemplateController>();
