@@ -5,10 +5,10 @@ using Zenject;
 
 namespace UnityEngine.Examples.RestTemplateEntity.Controller
 {
-    public class TemplateController : Controller<RestTemplateView>
+    public class UIdRestController : Controller<RestUidView>
     {
         [Inject] private readonly IProxy<IHttpContext> proxy;
-        public TemplateController(RestTemplateView view) : base(view)
+        public UIdRestController(RestUidView view) : base(view)
         {
         
         }

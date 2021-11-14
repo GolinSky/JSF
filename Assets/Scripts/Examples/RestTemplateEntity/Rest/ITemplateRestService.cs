@@ -8,6 +8,6 @@ namespace UnityEngine.Examples.RestTemplateEntity.Rest
     public interface ITemplateRestService :IRestService
     {
         [Get("uuid")]
-        RestResponse<TestDto> GetUId();
+        RestResponse<UIdDto> GetUId();
     }
 }
