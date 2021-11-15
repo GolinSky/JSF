@@ -1,4 +1,5 @@
-﻿using RestSharp;
+﻿using System.Collections.Generic;
+using RestSharp;
 using Retrofit.Net;
 using UnityEngine.MyPackage.Runtime.Scripts.BaseServices.SerializerService;
 using UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.ServiceLayer;
@@ -16,6 +17,7 @@ namespace UnityEngine.MyPackage.Runtime.Scripts.Patterns.Proxy
         {
             adapter = new RestAdapter(serverModelMiddleWare.ServerUri.AbsoluteUri);
             restService = adapter.Create<V>();
+            
         }
 
         protected virtual void UpdateDto(RestResponse<D> restResponse)
