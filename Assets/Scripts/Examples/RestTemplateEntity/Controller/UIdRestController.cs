@@ -1,13 +1,15 @@
-﻿using UnityEngine.Examples.RestTemplateEntity.View;
+﻿using UnityEngine.Examples.RestTemplateEntity.HttpContext;
+using UnityEngine.Examples.RestTemplateEntity.View;
 using UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Controller;
 using UnityEngine.MyPackage.Runtime.Scripts.Patterns.Proxy;
 using Zenject;
 
 namespace UnityEngine.Examples.RestTemplateEntity.Controller
 {
-    public class UIdRestController : Controller<RestUidView>
+    public class UIdRestController : Controller<RestUidView>, IDelayHttpContext
     {
         [Inject] private readonly IProxy<IHttpContext> proxy;
+        [Inject] private readonly IProxy<IDelayHttpContext> delayedProxy;
         public UIdRestController(RestUidView view) : base(view)
         {
         
@@ -28,6 +30,9 @@ namespace UnityEngine.Examples.RestTemplateEntity.Controller
         private void SendRequest()
         {
             proxy.Request(null);
+            delayedProxy.Request(this);
         }
+
+        public int Duration => 3;
     }
 }

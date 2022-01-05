@@ -7,7 +7,10 @@ namespace UnityEngine.Examples.ContextEntity.Scene.Loading
     {
         public override void InstallBindings()
         {
-            Container.Bind<ITickable>().To<SceneLoaderController>().AsSingle().NonLazy();
+            Container.Bind<ITickable>()
+                .To<SceneLoaderController>()
+                .AsSingle()
+                .NonLazy();
         }
     }
 }

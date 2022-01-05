@@ -1,6 +1,7 @@
 using UnityEngine.Examples.RestTemplateEntity.Context;
 using UnityEngine.Examples.RestTemplateEntity.Controller;
 using UnityEngine.Examples.RestTemplateEntity.Dto;
+using UnityEngine.Examples.RestTemplateEntity.HttpContext;
 using UnityEngine.Examples.RestTemplateEntity.MiddleWare;
 using UnityEngine.Examples.RestTemplateEntity.Proxy;
 using UnityEngine.Examples.RestTemplateEntity.ServiceLayer;
@@ -38,6 +39,10 @@ namespace UnityEngine.Examples.ContextEntity.Scene.RestTemplate
             Container.Bind<IProxy<IHttpContext>>()
                 .To<RestTemplateProxy>()
                 .WhenInjectedInto<UIdRestController>();
+
+            Container.Bind<IProxy<IDelayHttpContext>>()
+                .To<RestDelayProxy>()
+                .AsSingle();
 
             Container.Bind<IController>()
                 .To<UIdRestController>()

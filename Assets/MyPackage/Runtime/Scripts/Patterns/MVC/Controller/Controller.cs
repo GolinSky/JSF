@@ -1,4 +1,5 @@
 using UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.ServiceLayer;
+using UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.View;
 using Zenject;
 
 namespace UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Controller
@@ -6,6 +7,79 @@ namespace UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Controller
     public abstract class UpdateController : ITickable
     {
         public abstract void Tick();
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="T">View</typeparam>
+    public abstract class BaseController<T> where T:IView
+    {
+        protected T View { get; }
+        protected BaseController(T view)
+        {
+            View = view;
+        }
+      
+    }
+    
+    
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="T">View</typeparam>
+    public abstract class EventController<T>:BaseController<T>,IInitializable, ILateDisposable where T:IView  
+    {
+ 
+        protected EventController(T view) : base(view)
+        {
+        }
+
+        public void Initialize()
+        {
+            AddListeners();
+        }
+
+        public void LateDispose()
+        {
+            RemoveListeners();
+        }
+
+        protected abstract void AddListeners();
+        protected abstract void RemoveListeners();
+
+    }
+    
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="T">View</typeparam>
+    /// <typeparam name="C">Context from service layer</typeparam>
+    public abstract class EventController<T,C>:EventController<T> where T:IView  
+    {
+        [Inject]
+        private readonly IContextLayer<C> contextLayer;
+        protected EventController(T view) : base(view)
+        {
+        }
+
+        protected sealed override void AddListeners()
+        {
+            contextLayer.AddListener(HandleServiceLayer);
+            AddListenersInternal();
+        }
+
+        protected sealed override void RemoveListeners()
+        {
+            contextLayer.RemoveListener(HandleServiceLayer);
+            RemoveListenersInternal();
+        }
+
+        protected virtual void AddListenersInternal(){}
+        protected virtual void RemoveListenersInternal(){}
+        
+        protected abstract void HandleServiceLayer(C context);
+
     }
 
     /// <summary>

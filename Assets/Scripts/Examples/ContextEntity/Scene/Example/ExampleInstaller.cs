@@ -1,10 +1,8 @@
 ﻿using UnityEngine.Examples.ExampleEntity.Controller;
 using UnityEngine.Examples.ExampleEntity.Service;
 using UnityEngine.Examples.ExampleEntity.View;
-using UnityEngine.MyPackage.Runtime.Scripts.BaseServices.SceneService.Service;
-using UnityEngine.MyPackage.Runtime.Scripts.Extensions.MonoInstaller;
-using UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Controller;
 using UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.ServiceLayer;
+using UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.View;
 using UnityEngine.MyPackage.Runtime.Scripts.Utils.Ui.Fps;
 using Zenject;
 
@@ -17,31 +15,32 @@ namespace UnityEngine.Examples.ContextEntity.Scene.Example
 
         private void OnValidate()
         {
-            this.FindViewDependency(ref exampleView);
-            this.FindViewDependency(ref fpsCounterView);
+            // this.FindViewDependency(ref exampleView);
+            //  this.FindViewDependency(ref fpsCounterView);
         }
-        
+
         public override void InstallBindings()
         {
-            Container.Bind(typeof(IContextLayer<string>), typeof(IDtoLayer<SceneType>))
-                .To<ExampleServiceLayer>()
+            
+            Container.BindInterfacesTo<ExampleServiceLayer>()
                 .AsSingle()
+                .NonLazy();
+
+            Container.Bind<IView<string>>()
+                .To<ExampleView>()
+                .FromInstance(exampleView)
                 .WhenInjectedInto<ExampleController>();
-                
 
+            Container.Bind<IView<string>>()
+                .To<FpsCounterView>()
+                .FromInstance(fpsCounterView)
+                .WhenInjectedInto<FpsCounterController>();
             
-                Container.Bind<IController>()
-                .To<ExampleController>()
-                .WithArguments(exampleView)
-                .WhenInjectedInto<ExampleView>();
-            
-            Container.Bind<IController>()
-                .To<FpsCounterController>()
-                .WithArguments(fpsCounterView)
-                .WhenInjectedInto<FpsCounterView>();
-            
-            
-
+          
+            Container.BindInterfacesTo<ExampleController>()
+                .AsSingle();
+            Container.BindInterfacesTo<FpsCounterController>()
+                .AsSingle();
         }
     }
 }

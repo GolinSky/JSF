@@ -5,14 +5,10 @@ using UnityEngine.UI;
 
 namespace UnityEngine.MyPackage.Runtime.Scripts.Utils.Ui.Fps
 {
-    public class FpsCounterView : View<string>
+    public class FpsCounterView : BaseView<string>
     {
         [SerializeField] private Text fpsLabel;
-
-        private void Update()
-        {
-           Controller.Execute();
-        }
+        
 
         public override void SetContext(string context)
         {

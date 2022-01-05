@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace UnityEngine.Examples.ExampleEntity.View
 {
-    public class ExampleView : View<string>
+    public class ExampleView : BaseView<string>
     {
         [SerializeField] private Text text;
     
@@ -11,10 +11,6 @@ namespace UnityEngine.Examples.ExampleEntity.View
         {
             text.text = context;
         }
-
-        private void Update()
-        {
-            Controller.Execute();
-        }
+        
     }
 }

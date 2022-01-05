@@ -5,12 +5,18 @@ using UnityEngine.MyPackage.Runtime.Scripts.Patterns.Proxy;
 
 namespace UnityEngine.Examples.RestTemplateEntity.Proxy
 {
-    public class RestTemplateProxy : BaseProxy<IHttpContext, ITemplateRestService, UIdDto>
+    public class RestTemplateProxy : BaseProxy<IHttpContext, ITemplateRestApi, UIdDto>
     {
         public override void Request(IHttpContext context)
         {
-            RestResponse<UIdDto> personResponse = restService.GetUId();
-            UpdateDto(personResponse);
+            Test();
+        }
+
+        private async void Test()
+        {
+            await restService.GetUId();
+            
+            UpdateDto(restService.GetUId().Result);
         }
 
         public RestTemplateProxy(IServerModelMiddleWare serverModelMiddleWare) : base(serverModelMiddleWare)

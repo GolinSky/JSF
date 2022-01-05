@@ -27,4 +27,25 @@ namespace UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.View
     {
         public abstract void SetContext(T context);
     }
+
+    public abstract class BaseView : MonoBehaviour, IView
+    {
+        
+    }
+
+    public abstract class BaseView<T> : MonoBehaviour, IView<T>
+    {
+        public abstract void SetContext(T context);
+
+    }
+
+    public interface IView
+    {
+        
+    }
+
+    public interface IView<in T> : IView
+    {
+        void SetContext(T context);
+    }
 }
