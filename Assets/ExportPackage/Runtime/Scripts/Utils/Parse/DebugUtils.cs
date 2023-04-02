@@ -1,4 +1,6 @@
-﻿namespace UnityEngine.MyPackage.Runtime.Scripts.Utils.Parse
+﻿using UnityEngine;
+
+namespace CodeFramework.Runtime.Utils.Parse
 {
     public static class DebugUtils
     {

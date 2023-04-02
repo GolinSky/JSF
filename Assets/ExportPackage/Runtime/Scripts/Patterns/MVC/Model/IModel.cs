@@ -1,4 +1,4 @@
-namespace UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Model
+namespace CodeFramework.Runtime.Model
 {
     public interface IModel
     {

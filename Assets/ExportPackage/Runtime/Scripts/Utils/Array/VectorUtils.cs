@@ -1,4 +1,6 @@
-﻿namespace UnityEngine.MyPackage.Runtime.Scripts.Utils.Array
+﻿using UnityEngine;
+
+namespace CodeFramework.Runtime.Utils.Array
 {
     public static class VectorUtils
     {

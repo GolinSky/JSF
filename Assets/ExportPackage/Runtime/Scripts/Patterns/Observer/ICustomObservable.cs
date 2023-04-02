@@ -1,4 +1,4 @@
-﻿namespace UnityEngine.MyPackage.Runtime.Scripts.Patterns.Observer
+﻿namespace CodeFramework.Runtime.Observer
 {
     public interface ICustomObservable<T>
     {

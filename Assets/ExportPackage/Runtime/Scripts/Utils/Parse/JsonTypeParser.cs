@@ -1,4 +1,4 @@
-﻿namespace UnityEngine.MyPackage.Runtime.Scripts.Utils.Parse
+﻿namespace CodeFramework.Runtime.Utils.Parse
 {
     public class JsonTypeParser<T> where T:struct
     {

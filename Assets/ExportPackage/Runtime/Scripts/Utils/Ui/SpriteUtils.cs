@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 using UnityEngine.U2D;
 
-namespace UnityEngine.MyPackage.Runtime.Scripts.Utils.Ui
+namespace CodeFramework.Runtime.Utils.Ui
 {
     public static class SpriteUtils
     {

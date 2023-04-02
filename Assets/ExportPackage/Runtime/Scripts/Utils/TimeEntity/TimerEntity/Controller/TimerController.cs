@@ -1,7 +1,8 @@
 ﻿using System;
 using EventHandlerUtils;
+using UnityEngine;
 
-namespace UnityEngine.MyPackage.Runtime.Scripts.Utils.TimeEntity.TimerEntity.Controller
+namespace CodeFramework.Runtime.Utils.TimeEntity.TimerEntity.Controller
 {
     public class TimerController: ITimer
     {

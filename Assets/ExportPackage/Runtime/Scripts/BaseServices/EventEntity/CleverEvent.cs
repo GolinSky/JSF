@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace UnityEngine.MyPackage.Runtime.Scripts.BaseServices.EventEntity
+namespace CodeFramework.Runtime.BaseServices.EventEntity
 {
     public class CleverEvent<T>
     {

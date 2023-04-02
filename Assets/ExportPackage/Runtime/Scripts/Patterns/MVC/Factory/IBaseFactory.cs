@@ -1,4 +1,6 @@
-﻿namespace UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Factory
+﻿using UnityEngine;
+
+namespace CodeFramework.Runtime.Factory
 {
     
     //todo:refactor in such way like service layer was refactored

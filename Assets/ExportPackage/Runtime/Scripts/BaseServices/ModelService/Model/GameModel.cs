@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Model;
+using CodeFramework.Runtime.Model;
+using UnityEngine;
+using Object = UnityEngine.Object;
 
 #pragma warning disable 0649
 
-namespace UnityEngine.MyPackage.Runtime.Scripts.BaseServices.ModelService.Model
+namespace CodeFramework.Runtime.BaseServices.ModelService.Model
 {
 
     [Serializable]

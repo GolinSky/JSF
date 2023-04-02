@@ -3,8 +3,7 @@ using System.Reflection;
 using Castle.DynamicProxy;
 using RestSharp;
 
-
-namespace Retrofit.Net
+namespace CodeFramework.RetrogitRestPackage
 {
     public class RestInterceptor : IInterceptor
     {

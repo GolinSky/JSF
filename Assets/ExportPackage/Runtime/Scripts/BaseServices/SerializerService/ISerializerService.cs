@@ -1,4 +1,4 @@
-﻿namespace UnityEngine.MyPackage.Runtime.Scripts.BaseServices.SerializerService
+﻿namespace CodeFramework.Runtime.BaseServices.SerializerService
 {
     public interface ISerializerService 
     {

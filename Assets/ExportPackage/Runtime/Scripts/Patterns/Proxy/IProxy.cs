@@ -1,4 +1,4 @@
-﻿namespace UnityEngine.MyPackage.Runtime.Scripts.Patterns.Proxy
+﻿namespace CodeFramework.Runtime.Proxy
 {
     public interface IProxy<in T> where T:IHttpContext
     {

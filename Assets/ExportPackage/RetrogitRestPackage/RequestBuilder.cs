@@ -2,7 +2,7 @@
 using System.Linq;
 using RestSharp;
 
-namespace Retrofit.Net
+namespace CodeFramework.RetrogitRestPackage
 {
     class RequestBuilder
     {

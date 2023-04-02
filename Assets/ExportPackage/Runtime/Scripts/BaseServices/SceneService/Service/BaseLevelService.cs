@@ -1,7 +1,8 @@
-﻿using EventHandlerUtils;
-using UnityEngine.MyPackage.Runtime.Scripts.BaseServices.ModelService.Service;
+﻿using CodeFramework.Runtime.BaseServices.ModelService.Service;
+using EventHandlerUtils;
+using UnityEngine;
 
-namespace UnityEngine.MyPackage.Runtime.Scripts.BaseServices.SceneService.Service
+namespace CodeFramework.Runtime.BaseServices.SceneService.Service
 {
     public abstract class BaseLevelService<T> : IBaseLevelService<T>
     {

@@ -1,8 +1,8 @@
-﻿using UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Model;
-using UnityEngine.MyPackage.Runtime.Scripts.Utils.Array;
-using UnityEngine.MyPackage.Runtime.Scripts.Utils.Scene;
+﻿using CodeFramework.Runtime.Model;
+using CodeFramework.Runtime.Utils.Array;
+using CodeFramework.Runtime.Utils.Scene;
 
-namespace UnityEngine.MyPackage.Runtime.Scripts.BaseServices.SceneService.Model
+namespace CodeFramework.Runtime.BaseServices.SceneService.Model
 {
     public abstract class BaseLevelModel<ID,InternalDataParam> : Model<ID, SceneReference, InternalDataParam> where InternalDataParam : InternalData<ID, SceneReference>
     {

@@ -1,6 +1,6 @@
 ﻿using RestSharp;
 
-namespace Retrofit.Net.Attributes.Methods
+namespace CodeFramework.RetrogitRestPackage.Attributes.Methods
 {
     [RestMethod(Method.PUT)]
     public class PutAttribute : ValueAttribute

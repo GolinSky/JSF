@@ -1,4 +1,4 @@
-﻿namespace UnityEngine.MyPackage.Runtime.Scripts.ConfigurationService
+﻿namespace CodeFramework.Runtime.ConfigurationService
 {
     public class Configuration
     {

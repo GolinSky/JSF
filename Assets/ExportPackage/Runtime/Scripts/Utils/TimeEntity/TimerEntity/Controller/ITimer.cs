@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UnityEngine.MyPackage.Runtime.Scripts.Utils.TimeEntity.TimerEntity.Controller
+namespace CodeFramework.Runtime.Utils.TimeEntity.TimerEntity.Controller
 {
     public interface ITimer: IListener
     {

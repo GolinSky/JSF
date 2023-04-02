@@ -2,7 +2,7 @@
 
 #pragma warning disable 0649
 
-namespace UnityEngine.MyPackage.Runtime.Scripts.Utils.Array
+namespace CodeFramework.Runtime.Utils.Array
 {
     public static class ArrayUtils
     {

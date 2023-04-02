@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using Retrofit.Net.Attributes;
-using Retrofit.Net.Attributes.Methods;
-using Retrofit.Net.Attributes.Parameters;
+using CodeFramework.RetrogitRestPackage.Attributes;
+using CodeFramework.RetrogitRestPackage.Attributes.Methods;
+using CodeFramework.RetrogitRestPackage.Attributes.Parameters;
 
-
-namespace Retrofit.Net
+namespace CodeFramework.RetrogitRestPackage
 {
     class RestMethodInfo
     {

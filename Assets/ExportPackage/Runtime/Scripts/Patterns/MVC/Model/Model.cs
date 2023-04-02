@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using UnityEngine.MyPackage.Runtime.Scripts.Utils.Array;
-using UnityEngine.MyPackage.Runtime.Scripts.Utils.Parse;
+using CodeFramework.Runtime.Utils.Array;
+using CodeFramework.Runtime.Utils.Parse;
+using UnityEngine;
 
-namespace UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Model
+namespace CodeFramework.Runtime.Model
 {
     public abstract class Model<Id,InternalValue,Value>:ScriptableObject, IModel  where Value : InternalData<Id, InternalValue>
     {

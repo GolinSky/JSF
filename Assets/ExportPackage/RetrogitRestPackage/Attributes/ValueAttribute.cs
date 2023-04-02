@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Retrofit.Net.Attributes
+namespace CodeFramework.RetrogitRestPackage.Attributes
 {
     public class ValueAttribute : Attribute
     {

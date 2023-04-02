@@ -1,6 +1,6 @@
-﻿using UnityEngine.MyPackage.Runtime.Scripts.Utils.TimeEntity.TimerEntity.Controller;
+﻿using CodeFramework.Runtime.Utils.TimeEntity.TimerEntity.Controller;
 
-namespace UnityEngine.MyPackage.Runtime.Scripts.Utils.TimeEntity.TimerEntity.Factory
+namespace CodeFramework.Runtime.Utils.TimeEntity.TimerEntity.Factory
 {
    public class TimerFactory 
    {

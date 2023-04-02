@@ -1,9 +1,8 @@
 using System;
-using UnityEngine.MyPackage.Runtime.Scripts.BaseServices.ModelService.Service;
-
+using CodeFramework.Runtime.BaseServices.ModelService.Service;
 using Zenject;
 
-namespace UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Factory
+namespace CodeFramework.Runtime.Factory
 {
     [Obsolete]
     public class ServiceFactory// : IServiceFactory

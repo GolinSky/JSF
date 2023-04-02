@@ -1,51 +1,29 @@
-using UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Controller;
-using Zenject;
+using System;
+using CodeFramework.Runtime.Controller;
 
-namespace UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.View
+namespace CodeFramework.Runtime.View
 {
-    public abstract class View : MonoBehaviour
+    public abstract class View<TIViewController> : ViewBinding<TIViewController>
+        where TIViewController : IViewController
     {
-        [Inject]
-        protected readonly IController Controller;
-        
-        protected virtual void Start()
+        private void Awake()
         {
-            Controller.AddListeners();
+            OnInit();
         }
 
-        protected virtual void OnDestroy()
+        private void Update()
         {
-            if (Controller != null)
-            {
-                Controller.RemoveListeners();
-            }
+            OnUpdate();
         }
 
-    }
+        private void OnDestroy()
+        {
+            OnRelease();
+        }
 
-    public abstract class View<T> : View
-    {
-        public abstract void SetContext(T context);
-    }
-
-    public abstract class BaseView : MonoBehaviour, IView
-    {
-        
-    }
-
-    public abstract class BaseView<T> : MonoBehaviour, IView<T>
-    {
-        public abstract void SetContext(T context);
-
-    }
-
-    public interface IView
-    {
-        
-    }
-
-    public interface IView<in T> : IView
-    {
-        void SetContext(T context);
+        protected abstract void OnInit();
+        protected abstract void OnUpdate();
+        protected abstract void OnRelease();
     }
 }
+

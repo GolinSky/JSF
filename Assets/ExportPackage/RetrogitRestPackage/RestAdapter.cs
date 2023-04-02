@@ -1,9 +1,7 @@
-﻿
-
-using Castle.DynamicProxy;
+﻿using Castle.DynamicProxy;
 using RestSharp;
 
-namespace Retrofit.Net
+namespace CodeFramework.RetrogitRestPackage
 {
     public class RestAdapter
     {

@@ -1,8 +1,10 @@
-﻿namespace UnityEngine.MyPackage.Runtime.Scripts.Extensions.MonoInstaller
+﻿using UnityEngine;
+
+namespace CodeFramework.Runtime.Extensions.MonoInstaller
 {
     public static class MonoInstallerExtension 
     {
-        public static void FindViewDependency<T>(this Zenject.MonoInstaller monoInstaller, ref T t) where  T:Patterns.MVC.View.View
+        public static void FindViewDependency<T>(this Zenject.MonoInstaller monoInstaller, ref T t) where T : Object
         {
             if (t == null)
             {

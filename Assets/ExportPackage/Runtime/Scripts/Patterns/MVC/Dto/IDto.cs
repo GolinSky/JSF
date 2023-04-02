@@ -1,4 +1,4 @@
-namespace UnityEngine.MyPackage.Runtime.Scripts.Patterns.MVC.Dto
+namespace CodeFramework.Runtime.Dto
 {
     public interface  IDto
     {

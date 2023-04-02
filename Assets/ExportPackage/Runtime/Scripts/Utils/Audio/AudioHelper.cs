@@ -1,4 +1,6 @@
-﻿namespace UnityEngine.MyPackage.Runtime.Scripts.Utils.Audio
+﻿using UnityEngine;
+
+namespace CodeFramework.Runtime.Utils.Audio
 {
     [RequireComponent(typeof(AudioSource))]
     public class AudioHelper : MonoBehaviour

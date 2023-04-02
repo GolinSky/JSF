@@ -1,6 +1,7 @@
-﻿using UnityEngine.UI;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
-namespace UnityEngine.MyPackage.Runtime.Scripts.Utils.Swipe
+namespace CodeFramework.Runtime.Utils.Swipe
 {
     public class ButtonDisablerOnDrag : MonoBehaviour
     {

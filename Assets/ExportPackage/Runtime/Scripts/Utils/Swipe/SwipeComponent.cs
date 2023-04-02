@@ -1,9 +1,10 @@
 ﻿using System;
 using EventHandlerUtils;
+using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace UnityEngine.MyPackage.Runtime.Scripts.Utils.Swipe
+namespace CodeFramework.Runtime.Utils.Swipe
 {
     /// <summary>
     /// Behave like usual unity component 

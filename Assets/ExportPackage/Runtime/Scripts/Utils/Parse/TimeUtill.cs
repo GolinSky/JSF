@@ -1,5 +1,5 @@
 ﻿#pragma warning disable 0649
-namespace UnityEngine.MyPackage.Runtime.Scripts.Utils.Parse
+namespace CodeFramework.Runtime.Utils.Parse
 {
     public static class TimeUtils
     {

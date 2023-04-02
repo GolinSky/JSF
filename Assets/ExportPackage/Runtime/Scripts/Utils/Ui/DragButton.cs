@@ -1,7 +1,8 @@
 ﻿using System;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace UnityEngine.MyPackage.Runtime.Scripts.Utils.Ui
+namespace CodeFramework.Runtime.Utils.Ui
 {
     public class DragButton : MonoBehaviour, IPointerUpHandler, IPointerDownHandler, IPointerExitHandler
     { 

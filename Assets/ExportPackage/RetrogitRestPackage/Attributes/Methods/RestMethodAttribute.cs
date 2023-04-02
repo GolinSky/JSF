@@ -1,7 +1,7 @@
 ﻿using System;
 using RestSharp;
 
-namespace Retrofit.Net.Attributes.Methods
+namespace CodeFramework.RetrogitRestPackage.Attributes.Methods
 {
     public class RestMethodAttribute : Attribute
     {

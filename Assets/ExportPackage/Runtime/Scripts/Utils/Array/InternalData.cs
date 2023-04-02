@@ -1,6 +1,7 @@
 ﻿using System;
+using UnityEngine;
 
-namespace UnityEngine.MyPackage.Runtime.Scripts.Utils.Array
+namespace CodeFramework.Runtime.Utils.Array
 {
     [Serializable]
     public class InternalData<Id, InternalValue>

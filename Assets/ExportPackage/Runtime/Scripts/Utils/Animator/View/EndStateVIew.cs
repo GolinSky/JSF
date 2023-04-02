@@ -1,6 +1,7 @@
 ﻿using System;
+using UnityEngine;
 
-namespace UnityEngine.MyPackage.Runtime.Scripts.Utils.Animator.View
+namespace CodeFramework.Runtime.Utils.Animator.View
 {
     [Obsolete]
     public class EndStateVIew : StateMachineBehaviour

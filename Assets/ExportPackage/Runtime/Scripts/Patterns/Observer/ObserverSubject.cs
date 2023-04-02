@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
-namespace UnityEngine.MyPackage.Runtime.Scripts.Patterns.Observer
+namespace CodeFramework.Runtime.Observer
 {
     public class ObserverSubject<T> : MonoBehaviour, ICustomObservable<T>
     {

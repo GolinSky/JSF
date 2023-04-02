@@ -1,6 +1,7 @@
-﻿using UnityEngine.SceneManagement;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
-namespace UnityEngine.MyPackage.Runtime.Scripts.Utils.Scene
+namespace CodeFramework.Runtime.Utils.Scene
 {
     public static class SceneTools
     {
