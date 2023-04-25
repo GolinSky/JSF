@@ -1,5 +1,4 @@
-﻿using System;
-using CodeFramework.Runtime.Controller;
+﻿using CodeFramework.Runtime.Controller;
 using Zenject;
 
 namespace CodeFramework.Runtime.View

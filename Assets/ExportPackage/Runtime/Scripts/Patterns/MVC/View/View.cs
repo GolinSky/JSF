@@ -1,29 +1,28 @@
-using System;
 using CodeFramework.Runtime.Controller;
 
 namespace CodeFramework.Runtime.View
 {
-    public abstract class View<TIViewController> : ViewBinding<TIViewController>
+    public  class View<TIViewController> : ViewBinding<TIViewController>
         where TIViewController : IViewController
     {
-        private void Awake()
-        {
-            OnInit();
-        }
-
-        private void Update()
+        public void Update()
         {
             OnUpdate();
         }
 
-        private void OnDestroy()
+        public void Start()
+        {
+            OnInit();
+        }
+
+        public void OnDestroy()
         {
             OnRelease();
         }
-
-        protected abstract void OnInit();
-        protected abstract void OnUpdate();
-        protected abstract void OnRelease();
+        
+        protected virtual void OnInit(){}
+        protected virtual void OnUpdate(){}
+        protected virtual void OnRelease(){}
     }
 }
 

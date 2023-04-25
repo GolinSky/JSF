@@ -1,15 +1,18 @@
+using UnityEngine;
 using Zenject;
 
 namespace CodeFramework.Test
 {
     public class SimpleInstaller : MonoInstaller
     {
+        [SerializeField] protected SimpleView simpleViewPrefab;
         public override void InstallBindings()
         {
-            // Container.Bind<SimpleController>()
-            //     .To<ISimpleViewController>()
-            //     .AsSingle()
-            //     .WhenInjectedInto<SimpleView>();
+            Container.BindInterfacesTo<SimpleController>()
+                .AsSingle()
+                .NonLazy();
+            
+            Container.InstantiatePrefab(simpleViewPrefab);
         }
     }
 }

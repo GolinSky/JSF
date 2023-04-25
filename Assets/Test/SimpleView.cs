@@ -10,15 +10,25 @@ namespace CodeFramework.Test
 
         protected override void OnInit()
         {
-            text.text = ViewController.SimpleText;
+            UpdateText(ViewController.SimpleText);
+            ViewController.OnUpdate += UpdateText;
+        }
+        
+        protected override void OnRelease()
+        {
+            ViewController.OnUpdate -= UpdateText;
+        }
+
+        private void UpdateText(string value)
+        {
+            text.text = value;
+
         }
 
         protected override void OnUpdate()
         {
         }
 
-        protected override void OnRelease()
-        {
-        }
+        
     }
 }
