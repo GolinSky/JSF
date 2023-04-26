@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Globalization;
 using CodeFramework.Runtime.Controller;
-using Zenject;
 
 
 namespace CodeFramework.Test
@@ -16,7 +15,7 @@ namespace CodeFramework.Test
     public interface ISimpleController : IController, ISimpleViewController {}
 
 
-    public class SimpleController : Controller, ISimpleController,  ITickable, IInitializable, IDisposable
+    public class SimpleController : Controller, ISimpleController,  IDisposable
     {
         public event Action<string> OnUpdate;
 

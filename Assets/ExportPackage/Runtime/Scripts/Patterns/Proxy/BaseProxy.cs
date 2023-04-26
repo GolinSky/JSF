@@ -1,7 +1,6 @@
 ﻿using CodeFramework.RetrogitRestPackage;
 using CodeFramework.Runtime.BaseServices.SerializerService;
 using RestSharp;
-using Zenject;
 
 namespace CodeFramework.Runtime.Proxy
 {
@@ -24,7 +23,7 @@ namespace CodeFramework.Runtime.Proxy
     
     public abstract class BaseProxy<T,V,D> : BaseProxy<T,V> where V : class, IRestServiceApi where T : IHttpContext
     {
-        [Inject] protected readonly ISerializerService serializerService;
+        protected readonly ISerializerService serializerService;
         
         protected virtual void UpdateDto(RestResponse<D> restResponse)
         {
