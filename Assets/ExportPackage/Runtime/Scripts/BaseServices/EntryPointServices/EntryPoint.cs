@@ -1,15 +1,26 @@
-﻿using UnityEngine;
+﻿using CodeFramework.Runtime.ConfigurationService;
+using UnityEngine;
 
 namespace CodeFramework.Runtime.BaseServices.EntryPointServices
 {
-    public class EntryPoint 
+    public static class EntryPoint 
     {
         [RuntimeInitializeOnLoadMethod]
-        private static void InitializePrimarySystem()
+        private static void OnRuntimeInitializeOnLoadMethod()
         {
-            Debug.Log("InitializePrimarySystem");
-            //
+            Debug.Log("RuntimeInitializeOnLoadMethod");
+
+            GameContext gameContext = Resources.Load<GameContext>(Configuration.GameContextPath);
+            if (gameContext == null)
+            {
+                Debug.LogError($"Skipped default game pipeline. GameContext is not find at path {Configuration.GameContextPath}");
+                return;
+            }
+
+            IGameService service = gameContext.GameService;
+            service.Start();
+
         }
-        
+
     }
 }
