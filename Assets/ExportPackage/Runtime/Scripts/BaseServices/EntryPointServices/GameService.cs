@@ -4,15 +4,23 @@ using CodeFramework.Runtime.View;
 namespace CodeFramework.Runtime.BaseServices
 {
 
-    public interface IGameService
+    public interface IEntryPoint
     {
         void Start();
     }
-    public abstract class GameService:IGameService
+
+    public interface IGameService
+    {
+        IRepository<string> Repository { get; }
+        IFactory<ViewBinding, Controller> ViewFactory { get; }
+    }
+    public abstract class GameService:IEntryPoint, IGameService
     {
         protected ObserverSubject<float> TickService { get; }
-        protected abstract IRepository<string> Repository { get; }
-        protected abstract IFactory<ViewBinding, Controller> ViewFactory { get; }
+        // protected abstract IRepository<string> Repository { get; }
+
+        public IRepository<string> Repository { get; protected set; }
+        public abstract IFactory<ViewBinding, Controller> ViewFactory { get; protected set;}
         protected abstract BehaviourMap SceneMap { get; }
         
 

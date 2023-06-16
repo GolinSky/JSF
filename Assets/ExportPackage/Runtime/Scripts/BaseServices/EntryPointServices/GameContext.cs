@@ -4,11 +4,11 @@ namespace CodeFramework.Runtime.BaseServices
 {
     public interface IGameContext
     {
-        IGameService GameService { get; }
+        IEntryPoint GameService { get; }
     }
 
     public abstract class GameContext : MonoBehaviour, IGameContext
     {
-        public abstract IGameService GameService { get; }
+        public abstract IEntryPoint GameService { get; }
     }
 }

@@ -13,7 +13,7 @@ namespace CodeFramework.Runtime
             ServiceHub = serviceHub;
         }
 
-        public virtual string Id => nameof(Controller);
+        public virtual string Id => GetType().Name;
 
         public void Release()
         {
