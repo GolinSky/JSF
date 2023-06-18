@@ -1,4 +1,5 @@
 ﻿using CodeFramework.Runtime.View;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,7 +7,7 @@ namespace CodeFramework.Test
 {
     public class SimpleView : View<ISimpleViewController>
     {
-        [SerializeField] private Text text;
+        [SerializeField] private TextMeshProUGUI text;
 
         protected override void OnInit()
         {

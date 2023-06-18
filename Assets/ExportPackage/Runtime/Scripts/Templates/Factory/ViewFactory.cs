@@ -1,4 +1,5 @@
 ﻿using CodeFramework.Runtime.View;
+using UnityEngine;
 
 namespace CodeFramework.Runtime.Factory
 {
@@ -10,7 +11,8 @@ namespace CodeFramework.Runtime.Factory
 
         public override ViewBinding Construct(Controller controller)
         {
-            var binding = Repository.Load<ViewBinding>(controller.Id);
+            var bindingPrefab = Repository.Load<ViewBinding>(controller.Id);
+            var binding = Object.Instantiate(bindingPrefab);
             binding.Init(controller);
             return binding;
         }
