@@ -16,7 +16,7 @@ namespace CodeFramework.Runtime.BaseServices
         {
             Model = model;
             SceneManager.sceneLoaded += OnSceneLoaded;
-            SceneManager.sceneUnloaded += OnSceneUnloaded;
+            SceneManager.sceneUnloaded += OnSceneUnloaded;// need to be unsubscribed
         }
 
         private void OnSceneUnloaded(Scene scene)
