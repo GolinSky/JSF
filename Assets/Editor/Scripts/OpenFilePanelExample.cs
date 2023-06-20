@@ -2,7 +2,7 @@ using System.IO;
 using UnityEditor;
 using UnityEngine;
 
-namespace CodeFramework.ExportPackage.Editor.Scripts
+namespace CodeFramework.Editor.Scripts
 {
     public class OpenFilePanelExample : EditorWindow
     {

@@ -1,25 +1,22 @@
 ﻿using System.Collections.Generic;
 using CodeFramework.Runtime;
 using CodeFramework.Runtime.BaseServices;
-using CodeFramework.Runtime.Factory;
-using CodeFramework.Runtime.View;
 using ExportPackage.Runtime.Scripts.Core;
 using UnityEngine.SceneManagement;
 
 namespace CodeFramework.SimpleTemplate.Scene
 {
-    public class SimpleSceneMap : SceneMap<SimpleSceneName>
+    public sealed class SimpleSceneMap : SceneMap<SimpleSceneName>
     {
         private List<Controller> contextData;
-        protected override SimpleSceneName DefaultSceneKey => SimpleSceneName.Main;
+        protected override SimpleSceneName DefaultSceneKey => SimpleSceneName.Menu;
         protected override string ModelPath => "SimpleSceneModel";
         protected override ProjectContext ProjectContext { get; }
-        protected IFactory<ViewBinding, Controller> ViewFactory { get; private set; }
 
         protected override Dictionary<SimpleSceneName, SceneContext> SceneContexts =>
             new Dictionary<SimpleSceneName, SceneContext>
             {
-                { SimpleSceneName.Main, new SimpleMainSceneContext(ViewFactory) }
+                { SimpleSceneName.Menu, new SimpleMainSceneContext(GameService.ViewFactory) }
             };
 
         protected sealed override IHub<IService> ServiceHub { get;  set; }
@@ -56,10 +53,9 @@ namespace CodeFramework.SimpleTemplate.Scene
         }
 
 
-        public SimpleSceneMap(IRepository<string> repository, IFactory<ViewBinding, Controller> viewFactory) : base(repository)
+        public SimpleSceneMap(IGameService gameService) : base(gameService)
         {
             ProjectContext = new SimpleProjectContext();
-            ViewFactory = viewFactory;
         }
 
     }

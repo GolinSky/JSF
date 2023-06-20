@@ -1,6 +1,6 @@
 using UnityEditor;
 
-namespace CodeFramework.ExportPackage.Editor.Scripts
+namespace CodeFramework.Editor.Scripts
 {
     public class ForkMenu : EditorWindow
     {

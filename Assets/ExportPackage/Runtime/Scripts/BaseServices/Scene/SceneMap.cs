@@ -10,6 +10,7 @@ namespace CodeFramework.Runtime.BaseServices
     }
     public abstract class SceneMap<TSceneKey>:BehaviourMap
     {
+        protected IGameService GameService { get; }
         protected abstract TSceneKey DefaultSceneKey { get; }
         protected abstract string ModelPath { get; }
         protected SceneService<TSceneKey> SceneService { get; }
@@ -21,9 +22,10 @@ namespace CodeFramework.Runtime.BaseServices
         
         protected abstract IHub<IService> ServiceHub { get;  set; }
 
-        protected SceneMap(IRepository<string> repository)
+        protected SceneMap(IGameService gameService)
         {
-            SceneModel = repository.Load<SceneModel<TSceneKey>>(ModelPath);
+            GameService = gameService;
+            SceneModel = GameService.Repository.Load<SceneModel<TSceneKey>>(ModelPath);
             SceneService = new SceneService<TSceneKey>(SceneModel);
             SceneService.OnSceneLoad += OnLoadScene;
             SceneService.OnSceneUnLoad += OnSceneUnload;

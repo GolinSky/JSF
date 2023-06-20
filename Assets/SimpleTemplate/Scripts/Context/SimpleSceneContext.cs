@@ -2,7 +2,8 @@
 {
     public enum SimpleSceneName
     {
-        Main = 0,
+        Menu = 0,
+        Main = 1,
         
     }
     public class SimpleSceneContext
