@@ -10,6 +10,8 @@ namespace CodeFramework.Runtime.BaseServices
     }
     public abstract class SceneMap<TSceneKey>:BehaviourMap
     {
+        protected List<Controller> ContextData { get; private set; }
+
         protected IGameService GameService { get; }
         protected abstract TSceneKey DefaultSceneKey { get; }
         protected abstract string ModelPath { get; }
@@ -20,7 +22,7 @@ namespace CodeFramework.Runtime.BaseServices
 
         protected abstract Dictionary<TSceneKey, SceneContext> SceneContexts { get; }
         
-        protected abstract IHub<IService> ServiceHub { get;  set; }
+        protected IHub<IService> ServiceHub { get;  set; }
 
         protected SceneMap(IGameService gameService)
         {
@@ -31,8 +33,29 @@ namespace CodeFramework.Runtime.BaseServices
             SceneService.OnSceneUnLoad += OnSceneUnload;
         }
 
-        protected abstract void OnSceneUnload(TSceneKey key);
-        protected abstract void OnLoadScene(TSceneKey key, LoadSceneMode loadSceneMode);
+        protected virtual void OnSceneUnload(TSceneKey key)
+        {
+            if (ContextData != null)// todo:check if need key - dict 
+            {
+                foreach (var controller in ContextData)
+                {
+                    controller.Release();
+                }
+            }
+        }
+
+        protected virtual void OnLoadScene(TSceneKey key, LoadSceneMode loadSceneMode)
+        {
+            if (SceneContexts.TryGetValue(key, out var context))
+            {
+                ContextData = context.LoadContext();
+
+                foreach (var controller in ContextData)
+                {
+                    controller.Init(ServiceHub);
+                }
+            }
+        }
 
         public sealed override void Load()
         {
