@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ExportPackage.Runtime.Scripts.Core
+namespace CodeFramework
 {
     public class ServiceHub:IHub<IService>
     {

@@ -1,6 +1,4 @@
-﻿using ExportPackage.Runtime.Scripts.Core;
-
-namespace CodeFramework
+﻿namespace CodeFramework
 {
     public interface IEntity
     {
