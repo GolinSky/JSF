@@ -2,7 +2,7 @@
 {
     public interface IHub<TEntity> where TEntity:IEntity
     {
-        TEntity Get<TEntity>(string id);
+        TEntity Get<TEntity>();
         void Remove(TEntity entity);
 
     }

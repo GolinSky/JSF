@@ -1,35 +1,29 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace CodeFramework
 {
     public class ServiceHub:IHub<IService>
     {
-        protected Dictionary<string, IService> Services { get; }
+        protected List<IService> services;
 
         public ServiceHub(IEnumerable<IService> services)
         {
-            Services = new Dictionary<string, IService>();
+            this.services = services.ToList();
             foreach (var service in services)
             {
-                Services.Add(service.Id, service);
+                service.Init(this);
             }
         }
-        
-        public IService Get(string id)
-        {
-            if (Services.TryGetValue(id, out var service))
-            {
-                return service;
-            }
 
-            return default;
-        }
-
-        public TEntity Get<TEntity>(string id)
+        public TEntity Get<TEntity>()
         {
-            if (Services.TryGetValue(id, out var service))
+            foreach (var service in services)
             {
-                return (TEntity)service;
+                if (services is TEntity entity)
+                {
+                    return entity;
+                }
             }
 
             return default;
@@ -37,14 +31,7 @@ namespace CodeFramework
 
         public void Remove(IService entity)
         {
-            foreach (var keyValuePair in Services)
-            {
-                if (keyValuePair.Value == entity)
-                {
-                    Services.Remove(keyValuePair.Key);//it can 
-                    break;
-                }
-            }
+            services?.Remove(entity);
         }
     }
 }

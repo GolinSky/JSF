@@ -24,7 +24,7 @@ namespace CodeFramework.SimpleTemplate.Scene
         
         public SimpleSceneMap(IGameService gameService) : base(gameService)
         {
-            ProjectContext = new SimpleProjectContext();
+            ProjectContext = new SimpleProjectContext(gameService);
         }
 
     }

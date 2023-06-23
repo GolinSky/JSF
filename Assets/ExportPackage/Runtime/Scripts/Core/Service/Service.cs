@@ -9,7 +9,7 @@
     {
         protected IHub<IService> ServiceHub { get; private set; }
 
-        public string Id => nameof(Service);
+        public string Id => GetType().Name;
 
         public void Init(IHub<IService> serviceHub)
         {

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using CodeFramework.Runtime.BaseServices;
 
 
 namespace CodeFramework
@@ -9,6 +10,10 @@ namespace CodeFramework
         public override List<IService> LoadContext()
         {
             return new List<IService>();
+        }
+
+        public SimpleProjectContext(IGameService gameService) : base(gameService)
+        {
         }
     }
 }
