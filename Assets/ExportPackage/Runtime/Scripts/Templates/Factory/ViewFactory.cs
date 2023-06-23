@@ -11,8 +11,14 @@ namespace CodeFramework.Runtime.Factory
 
         public override ViewBinding Construct(Controller controller)
         {
-            var bindingPrefab = Repository.Load<ViewBinding>(controller.Id);
-            var binding = Object.Instantiate(bindingPrefab);
+            // var bindingPrefab = Repository.Load<ViewBinding>(controller.Id);
+            // var binding = Object.Instantiate(bindingPrefab);
+            // binding.Init(controller);
+            // return binding;
+            
+            //todo: fix asap
+            var bindingPrefab = Repository.Load<GameObject>(controller.Id);
+            var binding = Object.Instantiate(bindingPrefab).GetComponent<ViewBinding>();
             binding.Init(controller);
             return binding;
         }
