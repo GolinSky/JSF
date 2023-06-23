@@ -25,6 +25,16 @@ namespace CodeFramework
             return default;
         }
 
+        public TEntity Get<TEntity>(string id)
+        {
+            if (Services.TryGetValue(id, out var service))
+            {
+                return (TEntity)service;
+            }
+
+            return default;
+        }
+
         public void Remove(IService entity)
         {
             foreach (var keyValuePair in Services)
