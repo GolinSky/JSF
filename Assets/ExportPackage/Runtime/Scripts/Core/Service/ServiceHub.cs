@@ -20,7 +20,7 @@ namespace CodeFramework
         {
             foreach (var service in services)
             {
-                if (services is TEntity entity)
+                if (service is TEntity entity)
                 {
                     return entity;
                 }
