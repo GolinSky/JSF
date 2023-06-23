@@ -6,12 +6,14 @@ namespace CodeFramework.Runtime
     public abstract class Controller: IController
     {
         protected IHub<IService> ServiceHub { get; private set; }
+        public virtual string Id => GetType().Name;
+
         public void Init(IHub<IService> serviceHub)
         {
             ServiceHub = serviceHub;
+            OnInit();
         }
 
-        public virtual string Id => GetType().Name;
 
         public void Release()
         {
@@ -19,6 +21,7 @@ namespace CodeFramework.Runtime
         }
 
         protected virtual void OnRelease(){}
+        protected virtual void OnInit(){}
     }
 }
 
