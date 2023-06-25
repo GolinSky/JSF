@@ -13,7 +13,7 @@ namespace CodeFramework.SimpleTemplate.Scene
         protected override Dictionary<SimpleSceneName, SceneContext> SceneContexts =>
             new Dictionary<SimpleSceneName, SceneContext>
             {
-                { SimpleSceneName.Menu, new SimpleMainSceneContext() }
+                { SimpleSceneName.Menu, new SimpleMainSceneContext(GameService) }
             };
         
 

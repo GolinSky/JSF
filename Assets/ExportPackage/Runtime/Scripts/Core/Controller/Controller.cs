@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using CodeFramework.Runtime.BaseServices;
+using CodeFramework.Runtime.Observer;
 
 namespace CodeFramework.Runtime
 {
@@ -8,11 +10,20 @@ namespace CodeFramework.Runtime
     }
     public abstract class Controller: IController
     {
-        protected IHub<IService> ServiceHub { get; private set; }
-        public virtual string Id => GetType().Name;
-
         private List<Component<IController>> components;
 
+        protected IGameService GameService { get; }
+        protected IHub<IService> ServiceHub { get; private set; }
+
+        public ObserverSubject<float> TickService => GameService.TickService;
+
+        public virtual string Id => GetType().Name;
+
+
+        public Controller(IGameService gameService)
+        {
+            GameService = gameService;
+        }
         public void Init(IHub<IService> serviceHub)
         {
             ServiceHub = serviceHub;
@@ -60,7 +71,8 @@ namespace CodeFramework.Runtime
 
             return default;
         }
-        
+
+
         public TViewService GetService<TViewService>() where TViewService : IViewService
         {
             return ServiceHub.Get<TViewService>();

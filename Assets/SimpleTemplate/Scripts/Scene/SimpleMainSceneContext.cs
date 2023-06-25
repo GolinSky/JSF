@@ -1,13 +1,17 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using CodeFramework.Runtime;
 using CodeFramework.Runtime.BaseServices;
-using CodeFramework.Runtime.View;
 using CodeFramework.Test;
 
 namespace CodeFramework.SimpleTemplate.Scene
 {
     public class SimpleMainSceneContext:SceneContext
     {
+        
+        public SimpleMainSceneContext(IGameService gameService) : base(gameService)
+        {
+        }
         public override List<Controller> LoadContext()
         {
             return new List<Controller>
@@ -16,10 +20,12 @@ namespace CodeFramework.SimpleTemplate.Scene
             };
         }
 
-        private Controller Construct<TController>() where TController:Controller, new()
+        private Controller Construct<TController>() where TController:Controller
         {
-            var controller = new TController();
-            return controller;
+            var controller = Activator.CreateInstance(typeof(TController), GameService);
+            return (Controller)controller;
         }
+
+        
     }
 }

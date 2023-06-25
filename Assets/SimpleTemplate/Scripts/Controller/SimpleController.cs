@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using CodeFramework.Runtime;
+using CodeFramework.Runtime.BaseServices;
 
 
 namespace CodeFramework.Test
@@ -21,7 +22,7 @@ namespace CodeFramework.Test
 
         public string SimpleText { get; private set; }
 
-        public SimpleController()
+        public SimpleController(IGameService gameService) : base(gameService)
         {
             SimpleText = DateTime.UtcNow.ToString(CultureInfo.InvariantCulture);
         }
