@@ -18,4 +18,9 @@
         protected virtual void OnInit(){}
         protected virtual void OnRelease(){}
     }
+
+    public abstract class ViewComponent : ViewComponent<IViewController>
+    {
+        
+    }
 }

@@ -10,7 +10,7 @@ namespace CodeFramework.Runtime.View
     public abstract class View<TIViewController> : ViewBinding<TIViewController>, IView
         where TIViewController : IViewController
     {
-        [SerializeField] private ViewComponent<TIViewController>[] viewComponents;
+        [SerializeField] private ViewComponent[] viewComponents;
         
         public abstract ViewType ViewType { get; }
 
