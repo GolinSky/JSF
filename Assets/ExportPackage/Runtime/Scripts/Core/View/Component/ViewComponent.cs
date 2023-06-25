@@ -7,10 +7,15 @@
         public void Init(TViewController viewController)
         {
             ViewController = viewController;
+            OnInit();
         }
 
         public void Release()
         {
+            OnRelease();
         }
+
+        protected virtual void OnInit(){}
+        protected virtual void OnRelease(){}
     }
 }
