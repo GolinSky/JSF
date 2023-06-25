@@ -1,6 +1,6 @@
 ﻿namespace CodeFramework.Runtime.View.Component
 {
-    public interface IViewComponent
+    public interface IViewComponent:IComponent
     {
         void Release();
     }
