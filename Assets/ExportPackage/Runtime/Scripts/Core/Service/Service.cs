@@ -25,12 +25,17 @@ namespace CodeFramework
         public void Init(IHub<IService> serviceHub)
         {
             ServiceHub = serviceHub;
+            OnInit();
         }
-
 
         public void Release()
         {
             ServiceHub.Remove(this);
+            OnRelease();
         }
+
+        protected virtual void OnInit(){}
+        protected virtual void OnRelease(){}
+        
     }
 }
