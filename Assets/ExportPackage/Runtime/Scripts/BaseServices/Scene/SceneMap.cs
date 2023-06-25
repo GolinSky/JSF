@@ -24,7 +24,6 @@ namespace CodeFramework.Runtime.BaseServices
         protected abstract Dictionary<TSceneKey, SceneContext> SceneContexts { get; }
         
         protected IHub<IService> ServiceHub { get;  set; }
-        protected IHub<ViewBinding> ViewBindingHub { get;  set; }
 
         protected SceneMap(IGameService gameService)
         {
@@ -32,26 +31,10 @@ namespace CodeFramework.Runtime.BaseServices
             SceneModel = GameService.Repository.Load<SceneModel<TSceneKey>>(ModelPath);
             SceneService = new SceneService<TSceneKey>(SceneModel);
             SceneService.OnSceneLoad += OnLoadScene;
-            SceneService.OnSceneUnLoad += OnSceneUnload;
+            SceneService.OnBeforeSceneLoad += ClearData;
         }
 
-        protected virtual void OnSceneUnload(TSceneKey key)
-        {
-            // if (ContextData != null)// todo:check if need key - dict 
-            // {
-            //     foreach (var viewBinding in ViewBindings)
-            //     {
-            //         viewBinding.Release();
-            //     }
-            //     
-            //     foreach (var controller in ContextData)
-            //     {
-            //         controller.Release();
-            //     }
-            // }
-        }
-
-        protected virtual void OnLoadScene(TSceneKey key, LoadSceneMode loadSceneMode)
+        protected virtual void ClearData(TSceneKey sceneKey)
         {
             if (ContextData != null)
             {
@@ -67,7 +50,11 @@ namespace CodeFramework.Runtime.BaseServices
                 ContextData.Clear();
                 ViewBindings.Clear();
             }
-            
+        }
+
+
+        protected virtual void OnLoadScene(TSceneKey key, LoadSceneMode loadSceneMode)
+        {
             if (SceneContexts.TryGetValue(key, out var context))
             {
                 ContextData = context.LoadContext();

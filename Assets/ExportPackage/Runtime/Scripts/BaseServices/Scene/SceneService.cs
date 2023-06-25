@@ -7,6 +7,7 @@ namespace CodeFramework.Runtime.BaseServices
     public class SceneService<TSceneKey>
     {
         public Action<TSceneKey, LoadSceneMode> OnSceneLoad;
+        public Action<TSceneKey> OnBeforeSceneLoad;
         public Action<TSceneKey> OnSceneUnLoad;
         protected SceneModel<TSceneKey> Model { get; }
         public TSceneKey ActiveSceneName { get; private set; }
@@ -40,6 +41,7 @@ namespace CodeFramework.Runtime.BaseServices
         public void LoadScene(TSceneKey key)
         {
             var refScene = Model.GetSceneReference(key);
+            OnBeforeSceneLoad?.Invoke(key);
             LoadScene(refScene.ScenePath);
             ActiveSceneName = key;
         }
