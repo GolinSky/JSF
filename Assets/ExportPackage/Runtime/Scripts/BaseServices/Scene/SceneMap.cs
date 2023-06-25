@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using CodeFramework.Runtime.View;
 using UnityEngine.SceneManagement;
 
 namespace CodeFramework.Runtime.BaseServices
@@ -10,6 +11,7 @@ namespace CodeFramework.Runtime.BaseServices
     public abstract class SceneMap<TSceneKey>:BehaviourMap
     {
         protected List<Controller> ContextData { get; private set; }
+        protected List<ViewBinding> ViewBindings { get; private set; }
 
         protected IGameService GameService { get; }
         protected abstract TSceneKey DefaultSceneKey { get; }
@@ -22,6 +24,7 @@ namespace CodeFramework.Runtime.BaseServices
         protected abstract Dictionary<TSceneKey, SceneContext> SceneContexts { get; }
         
         protected IHub<IService> ServiceHub { get;  set; }
+        protected IHub<ViewBinding> ViewBindingHub { get;  set; }
 
         protected SceneMap(IGameService gameService)
         {
@@ -36,6 +39,11 @@ namespace CodeFramework.Runtime.BaseServices
         {
             if (ContextData != null)// todo:check if need key - dict 
             {
+                foreach (var viewBinding in ViewBindings)
+                {
+                    viewBinding.Release();
+                }
+                
                 foreach (var controller in ContextData)
                 {
                     controller.Release();
@@ -48,10 +56,15 @@ namespace CodeFramework.Runtime.BaseServices
             if (SceneContexts.TryGetValue(key, out var context))
             {
                 ContextData = context.LoadContext();
-
+                ViewBindings = new List<ViewBinding>();
                 foreach (var controller in ContextData)
                 {
                     controller.Init(ServiceHub);
+                    var binding = GameService.ViewFactory.Construct(controller);
+                    if (binding != null)
+                    {
+                        ViewBindings.Add(binding);
+                    }
                 }
             }
         }

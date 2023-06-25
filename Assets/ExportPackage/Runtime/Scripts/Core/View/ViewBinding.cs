@@ -1,17 +1,31 @@
-﻿namespace CodeFramework.Runtime.View
-{
+﻿using CodeFramework.Runtime.View.Component;
+using UnityEngine;
 
+namespace CodeFramework.Runtime.View
+{
     public abstract class ViewBinding : CustomMonoBehaviour
     {
+        protected Transform Transform { get; private set; }
+        private Vector3 Position => Transform.position;
+
+        private void Start()
+        {
+            Transform = transform;//cash
+        }
+
         public abstract void Init(IViewController viewController);
+        public abstract void Release();
+        public abstract TViewComponent GetViewComponent<TViewComponent>() where TViewComponent : IViewComponent;
+        public abstract bool TryGetViewComponent<TViewComponent>(out TViewComponent viewComponent) where TViewComponent : IViewComponent;
+
     }
     
-    public abstract class ViewBinding<TIViewController> : ViewBinding
-        where TIViewController : IViewController
+    public abstract class ViewBinding<TViewController> : ViewBinding
+        where TViewController : IViewController
     {
-        protected TIViewController ViewController { get; private set; }
+        protected TViewController ViewController { get; private set; }
 
-        public virtual void Destroy()
+        public sealed override void Release()
         {
             OnBeforeDestroy();
             Destroy(gameObject);
@@ -19,13 +33,12 @@
 
         public sealed override void Init(IViewController viewController)
         {
-            ViewController = (TIViewController)viewController;
+            ViewController = (TViewController)viewController;
+            OnInit();
         }
         
-        protected virtual void OnBeforeDestroy()
-        {
-            
-        }
+        protected virtual void OnBeforeDestroy() {}
+        protected virtual void OnInit() {}
         
     }
 }

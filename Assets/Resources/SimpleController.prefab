@@ -53,6 +53,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a757cd14c9f34f15a4b8fbfc491a9090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  viewComponents: []
   text: {fileID: 5137015305738256299}
 --- !u!222 &4752177539754176267
 CanvasRenderer:

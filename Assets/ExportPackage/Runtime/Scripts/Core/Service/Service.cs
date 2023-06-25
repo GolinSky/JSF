@@ -2,12 +2,16 @@
 
 namespace CodeFramework
 {
-    public interface IService:IEntity
+    public interface IViewService
+    {
+        
+    }
+    public interface IService:IEntity, IViewService
     {
         
     }
     
-    public abstract class Service:IService
+    public abstract class Service: IService
     {
         protected IGameService GameService { get; }
         protected IHub<IService> ServiceHub { get; private set; }

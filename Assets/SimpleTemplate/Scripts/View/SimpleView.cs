@@ -1,7 +1,6 @@
 ﻿using CodeFramework.Runtime.View;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace CodeFramework.Test
 {
@@ -9,13 +8,15 @@ namespace CodeFramework.Test
     {
         [SerializeField] private TextMeshProUGUI text;
 
+        public override ViewType ViewType => ViewType.Ui;
+        
         protected override void OnInit()
         {
             UpdateText(ViewController.SimpleText);
             ViewController.OnUpdate += UpdateText;
         }
         
-        protected override void OnRelease()
+        protected override void OnBeforeDestroy()
         {
             ViewController.OnUpdate -= UpdateText;
         }
@@ -25,11 +26,5 @@ namespace CodeFramework.Test
             text.text = value;
 
         }
-
-        protected override void OnUpdate()
-        {
-        }
-
-        
     }
 }

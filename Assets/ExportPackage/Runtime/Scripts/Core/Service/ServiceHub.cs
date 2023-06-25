@@ -9,8 +9,9 @@ namespace CodeFramework
 
         public ServiceHub(IEnumerable<IService> services)
         {
-            this.services = services.ToList();
-            foreach (var service in services)
+            var enumerable = services as IService[] ?? services.ToArray();
+            this.services = enumerable.ToList();
+            foreach (var service in enumerable)
             {
                 service.Init(this);
             }
@@ -25,7 +26,7 @@ namespace CodeFramework
                     return entity;
                 }
             }
-
+        
             return default;
         }
 
