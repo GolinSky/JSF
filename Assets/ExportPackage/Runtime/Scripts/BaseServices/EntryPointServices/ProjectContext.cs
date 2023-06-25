@@ -7,7 +7,6 @@ namespace CodeFramework
     public abstract class ProjectContext : IContext<IService>
     {
         protected IGameService GameService { get; }
-        public abstract List<IService> Data { get; }
         public abstract List<IService> LoadContext();
 
         protected ProjectContext(IGameService gameService)

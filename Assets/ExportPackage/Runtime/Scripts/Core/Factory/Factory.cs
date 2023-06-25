@@ -2,6 +2,10 @@
 
 namespace CodeFramework
 {
+    public interface IFactory<out TEntity>
+    {
+        TEntity Construct();
+    }
     public interface IFactory<out TEntity, in TKey> where TEntity : Object
     {
         TEntity Construct(TKey key);

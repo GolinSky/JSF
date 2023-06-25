@@ -23,12 +23,13 @@ namespace CodeFramework.Runtime.BaseServices
         IRepository<string> IGameService.Repository => Repository;
         protected IFactory<ViewBinding, Controller> ViewFactory { get; set; }
         IFactory<ViewBinding, Controller> IGameService.ViewFactory => ViewFactory;
-        protected abstract BehaviourMap SceneMap { get; }
+        protected BehaviourMap SceneMap { get; set; }
 
 
         protected GameService()
         {
-            TickService = TickableCustomFactory.Construct();
+            var tickableFactory = new TickableCustomFactory();
+            TickService = tickableFactory.Construct();
         }
 
         public void Start()

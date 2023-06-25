@@ -3,9 +3,9 @@ using UnityEngine;
 
 namespace CodeFramework
 {
-    public class TickableCustomFactory
+    public class TickableCustomFactory:IFactory<ObserverSubject<float>>
     {
-        public static ObserverSubject<float> Construct()
+        public ObserverSubject<float> Construct()
         {
             GameObject gameObject = new GameObject();
             return gameObject.AddComponent<TickableObject>();

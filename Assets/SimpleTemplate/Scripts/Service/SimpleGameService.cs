@@ -6,7 +6,6 @@ namespace CodeFramework
 {
     public sealed class SimpleGameService : GameService
     {
-        protected override BehaviourMap SceneMap { get; }
 
         public SimpleGameService()
         {
