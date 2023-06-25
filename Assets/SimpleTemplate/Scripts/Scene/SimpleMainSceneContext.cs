@@ -19,13 +19,5 @@ namespace CodeFramework.SimpleTemplate.Scene
                 { Construct<SimpleController>() }
             };
         }
-
-        private Controller Construct<TController>() where TController:Controller
-        {
-            var controller = Activator.CreateInstance(typeof(TController), GameService);
-            return (Controller)controller;
-        }
-
-        
     }
 }
