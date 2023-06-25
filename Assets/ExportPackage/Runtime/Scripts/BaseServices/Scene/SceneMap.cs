@@ -37,7 +37,23 @@ namespace CodeFramework.Runtime.BaseServices
 
         protected virtual void OnSceneUnload(TSceneKey key)
         {
-            if (ContextData != null)// todo:check if need key - dict 
+            // if (ContextData != null)// todo:check if need key - dict 
+            // {
+            //     foreach (var viewBinding in ViewBindings)
+            //     {
+            //         viewBinding.Release();
+            //     }
+            //     
+            //     foreach (var controller in ContextData)
+            //     {
+            //         controller.Release();
+            //     }
+            // }
+        }
+
+        protected virtual void OnLoadScene(TSceneKey key, LoadSceneMode loadSceneMode)
+        {
+            if (ContextData != null)
             {
                 foreach (var viewBinding in ViewBindings)
                 {
@@ -48,11 +64,10 @@ namespace CodeFramework.Runtime.BaseServices
                 {
                     controller.Release();
                 }
+                ContextData.Clear();
+                ViewBindings.Clear();
             }
-        }
-
-        protected virtual void OnLoadScene(TSceneKey key, LoadSceneMode loadSceneMode)
-        {
+            
             if (SceneContexts.TryGetValue(key, out var context))
             {
                 ContextData = context.LoadContext();
