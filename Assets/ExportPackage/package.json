@@ -1,6 +1,6 @@
 {
   "name": "com.pancake.mvcframework",
-  "version": "2.3.6",
+  "version": "2.3.7",
   "displayName": "Unity Framework Package",
   "description": "This is a package which included mvc, zenject",
   "unity": "2019.4",
