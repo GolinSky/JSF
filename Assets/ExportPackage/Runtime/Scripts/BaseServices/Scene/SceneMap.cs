@@ -88,21 +88,31 @@ namespace CodeFramework.Runtime.BaseServices
 
         public void RemoveController(Controller controller)
         {
-            foreach (var viewBinding in ViewBindings)
+            if (controller.HasView)
             {
-                if (viewBinding.Controller == controller)
+                ViewBinding target = default;
+                foreach (var viewBinding in ViewBindings) //use for instead
                 {
-                    viewBinding.Release();
-                    ViewBindings.Remove(viewBinding);
+                    if (viewBinding.Controller == controller)
+                    {
+                        viewBinding.Release();
+                        target = viewBinding;
+                    }
+                }
+
+                if (target != null)
+                {
+                    ViewBindings.Remove(target);
                 }
             }
+          
             controller.Release();
             ContextData.Remove(controller);
         }
 
         protected void InitController(Controller controller)
         {
-            //todo: make gamecontext - move there service hub and all factory - add gamecontext to gameservice
+            //todo: make some context - move there service hub and all factory - add gamecontext to gameservice
             controller
                 .Init(this)
                 .Init(ServiceHub);//refactor
