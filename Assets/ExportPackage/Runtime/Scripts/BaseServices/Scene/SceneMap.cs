@@ -106,11 +106,15 @@ namespace CodeFramework.Runtime.BaseServices
             controller
                 .Init(this)
                 .Init(ServiceHub);//refactor
-            var binding = GameService.ViewFactory.Construct(controller);
-            if (binding != null)
+            if (controller.HasView)
             {
-                ViewBindings.Add(binding);
+                var binding = GameService.ViewFactory.Construct(controller);
+                if (binding != null)
+                {
+                    ViewBindings.Add(binding);
+                }
             }
+      
         }
         protected abstract void OnProjectContextLoaded(List<IService> services);
 

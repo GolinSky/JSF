@@ -19,6 +19,7 @@ namespace CodeFramework.Runtime
         public ObserverSubject<float> TickService => GameService.TickService;
 
         public virtual string Id => GetType().Name;
+        public virtual bool HasView => true;
 
 
         public Controller(IGameService gameService)
