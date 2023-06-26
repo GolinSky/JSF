@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using CodeFramework.Runtime.Factory;
 
 namespace CodeFramework.Runtime.BaseServices
 {
@@ -15,8 +15,7 @@ namespace CodeFramework.Runtime.BaseServices
         
         protected Controller Construct<TController>() where TController:Controller
         {
-            var controller = Activator.CreateInstance(typeof(TController), GameService);
-            return (Controller)controller;
+            return new ControllerFactory<TController>().Construct(GameService);
         }
 
     }

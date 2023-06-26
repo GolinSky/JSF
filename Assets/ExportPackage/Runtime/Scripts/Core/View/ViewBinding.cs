@@ -5,6 +5,7 @@ namespace CodeFramework.Runtime.View
 {
     public abstract class ViewBinding : CustomMonoBehaviour
     {
+        public abstract IViewController Controller { get; }
         protected Transform Transform { get; private set; }
         private Vector3 Position => Transform.position;
 
@@ -23,6 +24,7 @@ namespace CodeFramework.Runtime.View
     public abstract class ViewBinding<TViewController> : ViewBinding
         where TViewController : IViewController
     {
+        public override IViewController Controller => ViewController;
         protected TViewController ViewController { get; private set; }
 
         public sealed override void Release()

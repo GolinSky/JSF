@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using CodeFramework.Runtime.Factory;
 using CodeFramework.Runtime.View;
 using UnityEngine.SceneManagement;
 
@@ -8,7 +9,13 @@ namespace CodeFramework.Runtime.BaseServices
     {
         public abstract void Load();
     }
-    public abstract class SceneMap<TSceneKey>:BehaviourMap
+
+    public interface IGameFactory
+    {
+        void AddController<TController>() where TController : Controller;
+        void RemoveController(Controller controller);
+    }
+    public abstract class SceneMap<TSceneKey>:BehaviourMap, IGameFactory
     {
         protected List<Controller> ContextData { get; private set; }
         protected List<ViewBinding> ViewBindings { get; private set; }
@@ -61,12 +68,7 @@ namespace CodeFramework.Runtime.BaseServices
                 ViewBindings = new List<ViewBinding>();
                 foreach (var controller in ContextData)
                 {
-                    controller.Init(ServiceHub);
-                    var binding = GameService.ViewFactory.Construct(controller);
-                    if (binding != null)
-                    {
-                        ViewBindings.Add(binding);
-                    }
+                    InitController(controller);
                 }
             }
         }
@@ -77,6 +79,39 @@ namespace CodeFramework.Runtime.BaseServices
             SceneService.LoadScene(DefaultSceneKey);
         }
 
+
+        public void AddController<TController>() where TController:Controller
+        {
+            var controller = new ControllerFactory<TController>().Construct(GameService);
+            InitController(controller);
+        }
+
+        public void RemoveController(Controller controller)
+        {
+            foreach (var viewBinding in ViewBindings)
+            {
+                if (viewBinding.Controller == controller)
+                {
+                    viewBinding.Release();
+                    ViewBindings.Remove(viewBinding);
+                }
+            }
+            controller.Release();
+            ContextData.Remove(controller);
+        }
+
+        protected void InitController(Controller controller)
+        {
+            //todo: make gamecontext - move there service hub and all factory - add gamecontext to gameservice
+            controller
+                .Init(this)
+                .Init(ServiceHub);//refactor
+            var binding = GameService.ViewFactory.Construct(controller);
+            if (binding != null)
+            {
+                ViewBindings.Add(binding);
+            }
+        }
         protected abstract void OnProjectContextLoaded(List<IService> services);
 
     }

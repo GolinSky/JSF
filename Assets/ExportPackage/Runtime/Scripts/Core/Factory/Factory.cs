@@ -6,7 +6,7 @@ namespace CodeFramework
     {
         TEntity Construct();
     }
-    public interface IFactory<out TEntity, in TKey> where TEntity : Object
+    public interface IFactory<out TEntity, in TKey> 
     {
         TEntity Construct(TKey key);
     }

@@ -13,6 +13,7 @@ namespace CodeFramework.Runtime
         private List<Component<IController>> components;
 
         protected IGameService GameService { get; }
+        protected IGameFactory GameFactory { get; private set; }
         protected IHub<IService> ServiceHub { get; private set; }
 
         public ObserverSubject<float> TickService => GameService.TickService;
@@ -38,6 +39,12 @@ namespace CodeFramework.Runtime
         protected virtual List<Component<IController>> BuildsComponents()
         {
             return new List<Component<IController>>();
+        }
+
+        public Controller Init(IGameFactory gameFactory)//fix
+        {
+            GameFactory = gameFactory;
+            return this;
         }
 
         public void Release()
