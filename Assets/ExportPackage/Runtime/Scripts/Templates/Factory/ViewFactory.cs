@@ -18,9 +18,14 @@ namespace CodeFramework.Runtime.Factory
             
             //todo: fix asap
             var bindingPrefab = Repository.Load<GameObject>(controller.Id);
-            var binding = Object.Instantiate(bindingPrefab).GetComponent<ViewBinding>();
-            binding.Init(controller);
-            return binding;
+            if (bindingPrefab != null)
+            {
+                var binding = Object.Instantiate(bindingPrefab).GetComponent<ViewBinding>();
+                binding.Init(controller);
+                return binding;
+            }
+
+            return null;
         }
     }
 }
