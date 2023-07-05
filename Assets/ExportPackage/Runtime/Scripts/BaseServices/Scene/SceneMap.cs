@@ -15,7 +15,7 @@ namespace CodeFramework.Runtime.BaseServices
         void AddController<TController>() where TController : Controller;
         void RemoveController(Controller controller);
     }
-    public abstract class SceneMap<TSceneKey>:BehaviourMap, IGameFactory
+    public abstract class SceneMap<TSceneKey>:BehaviourMap, IGameFactory// impl idisposable
     {
         protected List<Controller> ContextData { get; private set; }
         protected List<ViewBinding> ViewBindings { get; private set; }
@@ -35,7 +35,7 @@ namespace CodeFramework.Runtime.BaseServices
         protected SceneMap(IGameService gameService)
         {
             GameService = gameService;
-            SceneModel = GameService.Repository.Load<SceneModel<TSceneKey>>(ModelPath);
+            SceneModel = GameService.Repository.Load<SceneModel<TSceneKey>>(ModelPath);//not use repository here - use factory - hide repository in other interface
             SceneService = new SceneService<TSceneKey>(SceneModel);
             SceneService.OnSceneLoad += OnLoadScene;
             SceneService.OnBeforeSceneLoad += ClearData;

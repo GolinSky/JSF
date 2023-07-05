@@ -2,11 +2,9 @@
 
 namespace CodeFramework.Runtime.ConfigurationService
 {
-    public class Configuration
+    public class Configuration //can use smth which data can be changed 
     {
-        public const string GameModelPath = "Model/GameModel";
+        public const string GameModelPath = "Model/GameModel";// need this?
         public const string GameContextPath = nameof(GameContext);
-    }   
-
- 
+    }
 }

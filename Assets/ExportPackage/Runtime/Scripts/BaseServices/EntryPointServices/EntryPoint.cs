@@ -19,8 +19,6 @@ namespace CodeFramework.Runtime.BaseServices.EntryPointServices
 
             IEntryPoint service = gameContext.GameService;
             service.Start();
-
         }
-
     }
 }
