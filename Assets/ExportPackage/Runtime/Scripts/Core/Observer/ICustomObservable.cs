@@ -4,7 +4,7 @@
     {
         void AddObserver(ICustomObserver<T> o);
         void RemoveObserver(ICustomObserver<T> o);
-        void NotifyObservers(T state);
+        //void NotifyObservers(T state);
         
         T CurrentState { get; }
     }

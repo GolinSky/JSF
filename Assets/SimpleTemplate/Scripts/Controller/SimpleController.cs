@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using CodeFramework.Runtime;
 using CodeFramework.Runtime.BaseServices;
@@ -16,7 +17,7 @@ namespace CodeFramework.Test
     public interface ISimpleController : IController, ISimpleViewController {}
 
 
-    public class SimpleController : Controller, ISimpleController,  IDisposable
+    public class SimpleController : Controller, ISimpleController,  IDisposable, ITick
     {
         public event Action<string> OnUpdate;
 
@@ -27,19 +28,22 @@ namespace CodeFramework.Test
             SimpleText = DateTime.UtcNow.ToString(CultureInfo.InvariantCulture);
         }
 
-        public void Tick()
+        protected override List<Component<IController>> BuildsComponents()
         {
-            SimpleText = DateTime.UtcNow.ToString(CultureInfo.InvariantCulture);
-            OnUpdate?.Invoke(SimpleText);
-        }
-
-        public void Initialize()
-        {
-            
+            return new List<Component<IController>>
+            {
+                {new TickComponent(this)}
+            };
         }
 
         public void Dispose()
         {
+        }
+
+        public void Update(float deltaTime)
+        {
+            SimpleText = DateTime.UtcNow.ToString(CultureInfo.InvariantCulture);
+            OnUpdate?.Invoke(SimpleText);
         }
     }
 }

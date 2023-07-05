@@ -27,7 +27,7 @@ namespace CodeFramework.Runtime.Observer
             customObserversList.Remove(o);
         }
 
-        public virtual void NotifyObservers(T state)
+        protected virtual void NotifyObservers(T state)
         {
             currentState = state;
             for (var i = 0; i < customObserversList.Count; i++)
