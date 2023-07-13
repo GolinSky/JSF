@@ -1,4 +1,4 @@
-﻿namespace ExportPackage.Editor.CodeGeneration.ControllerTemplate
+﻿namespace CodeFramework.Editor
 {
     // public class ControllerTemplate:ICodeGenerationTemplate
     // {
