@@ -1,1 +1,1 @@
-install from package manager - git url - https://GolinSky@bitbucket.org/GolinSky/unity-core-system.git?path=/Assets/ExportPackage
+install from package manager -> git url -> https://github.com/GolinSky/JSF?path=/Assets/ExportPackage

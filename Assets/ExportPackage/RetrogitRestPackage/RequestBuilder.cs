@@ -4,7 +4,7 @@ using RestSharp;
 
 namespace CodeFramework.RetrogitRestPackage
 {
-    class RequestBuilder
+    class RequestBuilder    
     {
         private readonly RestMethodInfo methodInfo;
         private readonly object[] arguments;

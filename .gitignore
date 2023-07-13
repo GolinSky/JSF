@@ -41,7 +41,7 @@ sysinfo.txt
 #tortoise mergetool temp files
 *.orig
 *.orig.meta
-/.idea/.idea.BR
+/.idea/
 /Assets/ProCore
 /Assets/ProCore.meta
 /Assets/3rd-Party/AmplifyShaderEditor
