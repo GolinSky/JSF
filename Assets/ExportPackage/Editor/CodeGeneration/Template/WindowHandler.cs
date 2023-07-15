@@ -10,13 +10,13 @@ namespace CodeFramework.Editor
     {
         private CreateTemplateWindow window;
         
-        public ICodeGenerationTemplate GenerationTemplate { get; }
+        public ICodeGeneratingTemplate GenerationTemplate { get; }
         protected string EntityType { get; }
         protected ProjectSettings ProjectSettings { get;  }
 
 
 
-        public WindowHandler(ICodeGenerationTemplate generationTemplate)
+        public WindowHandler(ICodeGeneratingTemplate generationTemplate)
         {
             ProjectSettings = Resources.Load<ProjectSettings>(Configuration.ProjectSettingsPath);
 
@@ -33,7 +33,7 @@ namespace CodeFramework.Editor
             window.OnClosed -= OnClosed;
             var result = window.Result;
             var name = $"{result}{EntityType}";
-            ProjectWindowUtil.CreateAssetWithContent($"{name}.cs", GenerationTemplate.GetTemplate(name));
+            ProjectWindowUtil.CreateAssetWithContent($"{name}.cs", GenerationTemplate.GetTemplate(result));
         }
     }
 }

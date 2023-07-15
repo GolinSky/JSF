@@ -1,6 +1,6 @@
 ﻿namespace CodeFramework.Editor
 {
-    public interface ICodeGenerationTemplate
+    public interface ICodeGeneratingTemplate
     {
         string EntityType { get; }
         string GetTemplate(string name);

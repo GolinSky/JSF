@@ -4,12 +4,12 @@ using UnityEngine;
 
 namespace CodeFramework.Editor
 {
-    public abstract class CodeGenerationTemplate: ICodeGenerationTemplate
+    public abstract class CodeGeneratingTemplate: ICodeGeneratingTemplate
     {
         public abstract string EntityType { get; }
         protected ProjectSettings ProjectSettings { get; }
 
-        protected CodeGenerationTemplate( )
+        protected CodeGeneratingTemplate( )
         {
             ProjectSettings = Resources.Load<ProjectSettings>(Configuration.ProjectSettingsPath);
 

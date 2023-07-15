@@ -2,7 +2,7 @@
 
 namespace CodeFramework.Editor
 {
-    public class ControllerTemplate : CodeGenerationTemplate
+    public class ControllerTemplate : CodeGeneratingTemplate
     {
         private const string Template = @"using CodeFramework.Runtime.Controllers;
 using CodeFramework.Runtime.Controllers.BaseServices;

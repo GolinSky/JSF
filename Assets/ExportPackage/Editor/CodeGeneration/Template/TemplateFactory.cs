@@ -17,8 +17,5 @@ namespace CodeFramework.Editor
         {
             var windowHandler = new WindowHandler(new ControllerTemplate());
         }
-
-
-    
     }
 }
