@@ -1,4 +1,4 @@
-﻿namespace CodeFramework.Runtime.Observer
+﻿namespace CodeFramework.Runtime.Controllers.Observer
 {
     public interface ICustomObservable<T>
     {

@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using CodeFramework.Runtime.Factory;
-using CodeFramework.Runtime.View;
+using CodeFramework.Runtime.Controllers.Factory;
+using CodeFramework.Runtime.Controllers.View;
 using UnityEngine.SceneManagement;
 
-namespace CodeFramework.Runtime.BaseServices
+namespace CodeFramework.Runtime.Controllers.BaseServices
 {
     public abstract class BehaviourMap
     {

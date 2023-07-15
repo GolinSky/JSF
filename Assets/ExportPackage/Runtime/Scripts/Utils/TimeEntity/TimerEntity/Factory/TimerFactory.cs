@@ -1,6 +1,6 @@
-﻿using CodeFramework.Runtime.Utils.TimeEntity.TimerEntity.Controller;
+﻿using CodeFramework.Runtime.Controllers.Utils.TimeEntity.TimerEntity.Controller;
 
-namespace CodeFramework.Runtime.Utils.TimeEntity.TimerEntity.Factory
+namespace CodeFramework.Runtime.Controllers.Utils.TimeEntity.TimerEntity.Factory
 {
    public class TimerFactory 
    {

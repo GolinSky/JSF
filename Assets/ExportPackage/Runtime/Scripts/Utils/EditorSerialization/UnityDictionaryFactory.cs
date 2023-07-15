@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace CodeFramework.Runtime
+namespace CodeFramework.Runtime.Controllers
 {
     public static class UnityDictionaryFactory
     {

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace CodeFramework.Runtime.View
+namespace CodeFramework.Runtime.Controllers.View
 {
     public class CustomMonoBehaviour: MonoBehaviour
     {

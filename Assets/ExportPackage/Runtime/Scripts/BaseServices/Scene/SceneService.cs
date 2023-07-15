@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace CodeFramework.Runtime.BaseServices
+namespace CodeFramework.Runtime.Controllers.BaseServices
 {
     public class SceneService<TSceneKey>
     {

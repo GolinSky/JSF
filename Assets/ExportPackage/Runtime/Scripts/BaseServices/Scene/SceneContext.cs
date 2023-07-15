@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using CodeFramework.Runtime.Factory;
+using CodeFramework.Runtime.Controllers.Factory;
 
-namespace CodeFramework.Runtime.BaseServices
+namespace CodeFramework.Runtime.Controllers.BaseServices
 {
     public abstract class SceneContext:IContext<Controller>
     {

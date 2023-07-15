@@ -1,7 +1,7 @@
-﻿using CodeFramework.Runtime.Observer;
-using CodeFramework.Runtime.View;
+﻿using CodeFramework.Runtime.Controllers.Observer;
+using CodeFramework.Runtime.Controllers.View;
 
-namespace CodeFramework.Runtime.BaseServices
+namespace CodeFramework.Runtime.Controllers.BaseServices
 {
     public interface IEntryPoint
     {

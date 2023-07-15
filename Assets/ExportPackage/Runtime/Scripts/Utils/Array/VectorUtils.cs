@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace CodeFramework.Runtime.Utils.Array
+namespace CodeFramework.Runtime.Controllers.Utils.Array
 {
     public static class VectorUtils
     {

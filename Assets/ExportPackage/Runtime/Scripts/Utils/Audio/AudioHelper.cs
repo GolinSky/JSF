@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace CodeFramework.Runtime.Utils.Audio
+namespace CodeFramework.Runtime.Controllers.Utils.Audio
 {
     [RequireComponent(typeof(AudioSource))]
     public class AudioHelper : MonoBehaviour

@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using CodeFramework.Runtime.BaseServices;
-using CodeFramework.Runtime.Observer;
+using CodeFramework.Runtime.Controllers.BaseServices;
+using CodeFramework.Runtime.Controllers.Observer;
 
-namespace CodeFramework.Runtime
+namespace CodeFramework.Runtime.Controllers
 {
     public interface IController : IViewController, IEntity
     {

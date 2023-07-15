@@ -1,7 +1,7 @@
-using CodeFramework.Runtime.View.Component;
+using CodeFramework.Runtime.Controllers.View.Component;
 using UnityEngine;
 
-namespace CodeFramework.Runtime.View
+namespace CodeFramework.Runtime.Controllers.View
 {
     public interface IView
     {

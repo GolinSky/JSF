@@ -1,4 +1,4 @@
-﻿namespace CodeFramework.Runtime.Utils.Parse
+﻿namespace CodeFramework.Runtime.Controllers.Utils.Parse
 {
     public class JsonTypeParser<T> where T:struct
     {

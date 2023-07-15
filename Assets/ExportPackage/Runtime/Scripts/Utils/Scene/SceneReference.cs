@@ -6,7 +6,7 @@ using UnityEngine;
 #if UNITY_EDITOR
 #endif
 
-namespace CodeFramework.Runtime
+namespace CodeFramework.Runtime.Controllers
 {
 
 // Author: JohannesMP (2018-08-12)

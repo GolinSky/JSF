@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace CodeFramework.Runtime.Utils.Parse
+namespace CodeFramework.Runtime.Controllers.Utils.Parse
 {
     public static class DebugUtils
     {

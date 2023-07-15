@@ -1,4 +1,4 @@
-namespace CodeFramework.Runtime
+namespace CodeFramework.Runtime.Controllers
 {
     public abstract class ControllerComponent : Component<IController>
     {

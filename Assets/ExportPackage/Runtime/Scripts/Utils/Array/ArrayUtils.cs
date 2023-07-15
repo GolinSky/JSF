@@ -2,7 +2,7 @@
 
 #pragma warning disable 0649
 
-namespace CodeFramework.Runtime.Utils.Array
+namespace CodeFramework.Runtime.Controllers.Utils.Array
 {
     public static class ArrayUtils
     {

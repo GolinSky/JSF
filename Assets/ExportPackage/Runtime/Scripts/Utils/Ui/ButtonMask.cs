@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace CodeFramework.Runtime.Utils.Ui
+namespace CodeFramework.Runtime.Controllers.Utils.Ui
 {
     [RequireComponent(typeof(RectTransform))]
     [RequireComponent(typeof(Image))]

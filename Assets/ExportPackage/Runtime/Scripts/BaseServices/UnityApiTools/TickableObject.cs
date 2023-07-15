@@ -1,4 +1,4 @@
-﻿using CodeFramework.Runtime.Observer;
+﻿using CodeFramework.Runtime.Controllers.Observer;
 using UnityEngine;
 
 namespace CodeFramework

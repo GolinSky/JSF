@@ -1,7 +1,7 @@
 ﻿using System;
-using CodeFramework.Runtime.BaseServices;
+using CodeFramework.Runtime.Controllers.BaseServices;
 
-namespace CodeFramework.Runtime.Factory
+namespace CodeFramework.Runtime.Controllers.Factory
 {
     public class ControllerFactory<TController>:IFactory<TController, IGameService> 
         where TController:Controller

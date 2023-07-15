@@ -1,8 +1,8 @@
 ﻿using CodeFramework.RetrogitRestPackage;
-using CodeFramework.Runtime.BaseServices.SerializerService;
+using CodeFramework.Runtime.Controllers.BaseServices.SerializerService;
 using RestSharp;
 
-namespace CodeFramework.Runtime.Proxy
+namespace CodeFramework.Runtime.Controllers.Proxy
 {
     public abstract class BaseProxy<T,V> : IProxy<T> where T : IHttpContext where V: class, IRestServiceApi
     {

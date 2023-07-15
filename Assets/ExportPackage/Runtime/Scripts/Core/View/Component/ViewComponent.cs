@@ -1,4 +1,4 @@
-﻿namespace CodeFramework.Runtime.View.Component
+﻿namespace CodeFramework.Runtime.Controllers.View.Component
 {
     public abstract class ViewComponent<TViewController>: CustomMonoBehaviour, IViewComponent<TViewController> where TViewController : IViewController
     {

@@ -1,4 +1,4 @@
-﻿namespace CodeFramework.Runtime.BaseServices.SerializerService
+﻿namespace CodeFramework.Runtime.Controllers.BaseServices.SerializerService
 {
     public interface ISerializerService 
     {

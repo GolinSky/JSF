@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace CodeFramework.Runtime
+namespace CodeFramework.Runtime.Controllers
 {
     public interface IKeyValue<TKey, TValue>
     {

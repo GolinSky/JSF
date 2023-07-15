@@ -1,4 +1,4 @@
-﻿namespace CodeFramework.Runtime.View.Component
+﻿namespace CodeFramework.Runtime.Controllers.View.Component
 {
     public interface IViewComponent:IComponent
     {

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace CodeFramework.Runtime.Utils.Swipe
+namespace CodeFramework.Runtime.Controllers.Utils.Swipe
 {
     /// <summary>
     /// Behave like usual unity component 

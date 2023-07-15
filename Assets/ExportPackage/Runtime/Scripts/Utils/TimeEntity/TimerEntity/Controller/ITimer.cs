@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CodeFramework.Runtime.Utils.TimeEntity.TimerEntity.Controller
+namespace CodeFramework.Runtime.Controllers.Utils.TimeEntity.TimerEntity.Controller
 {
     public interface ITimer: IListener
     {

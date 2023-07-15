@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CodeFramework.Runtime.Proxy
+namespace CodeFramework.Runtime.Controllers.Proxy
 {
     public interface IServerModelMiddleWare
     {

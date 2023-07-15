@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace CodeFramework.Runtime.Utils.String
+namespace CodeFramework.Runtime.Controllers.Utils.String
 {
     public static class StringUtils
     {

@@ -1,4 +1,4 @@
-namespace CodeFramework.Runtime.Dto
+namespace CodeFramework.Runtime.Controllers.Dto
 {
     public interface  IDto
     {

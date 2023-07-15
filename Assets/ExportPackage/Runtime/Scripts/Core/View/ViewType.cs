@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CodeFramework.Runtime.View
+namespace CodeFramework.Runtime.Controllers.View
 {
     [Serializable]
     public enum ViewType

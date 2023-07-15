@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CodeFramework.Runtime
+namespace CodeFramework.Runtime.Controllers
 {
     [Serializable]
     public class DictionaryWrapper<TKey, TValue>

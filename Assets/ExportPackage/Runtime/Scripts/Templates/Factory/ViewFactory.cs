@@ -1,7 +1,7 @@
-﻿using CodeFramework.Runtime.View;
+﻿using CodeFramework.Runtime.Controllers.View;
 using UnityEngine;
 
-namespace CodeFramework.Runtime.Factory
+namespace CodeFramework.Runtime.Controllers.Factory
 {
     public class ViewFactory: Factory<ViewBinding, Controller, string>
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using CodeFramework.Runtime;
-using CodeFramework.Runtime.BaseServices;
+using CodeFramework.Runtime.Controllers;
+using CodeFramework.Runtime.Controllers.BaseServices;
 using CodeFramework.Test;
 
 namespace CodeFramework.SimpleTemplate.Scene

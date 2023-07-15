@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace CodeFramework.Runtime.BaseServices
+namespace CodeFramework.Runtime.Controllers.BaseServices
 {
     public interface IGameContext
     {

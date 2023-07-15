@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using CodeFramework.Runtime.Utils.String;
+using CodeFramework.Runtime.Controllers.Utils.String;
 
-namespace CodeFramework.Runtime.Utils.Parse
+namespace CodeFramework.Runtime.Controllers.Utils.Parse
 {
     public static class ParseUtil 
     {

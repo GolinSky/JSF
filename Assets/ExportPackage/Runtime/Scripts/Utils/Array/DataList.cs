@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using CodeFramework.Runtime.Utils.Parse;
+using CodeFramework.Runtime.Controllers.Utils.Parse;
 using UnityEngine;
 
-namespace CodeFramework.Runtime.Utils.Array
+namespace CodeFramework.Runtime.Controllers.Utils.Array
 {
     [Serializable]
     public class DataList<Value, InternalValue, Id> where Value : InternalData<Id, InternalValue>

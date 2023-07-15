@@ -1,14 +1,14 @@
-﻿using CodeFramework.Runtime.ConfigurationService;
+﻿using CodeFramework.Runtime.Controllers.ConfigurationService;
 using UnityEngine;
 
-namespace CodeFramework.Runtime.BaseServices.EntryPointServices
+namespace CodeFramework.Runtime.Controllers.BaseServices.EntryPointServices
 {
     public static class EntryPoint 
     {
         [RuntimeInitializeOnLoadMethod]
         private static void OnRuntimeInitializeOnLoadMethod()
         {
-            Debug.Log("RuntimeInitializeOnLoadMethod");
+            Debug.Log("Execute default game pipeline");
 
             GameContext gameContext = Resources.Load<GameContext>(Configuration.GameContextPath);
             if (gameContext == null)

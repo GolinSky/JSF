@@ -1,4 +1,4 @@
-﻿namespace CodeFramework.Runtime
+﻿namespace CodeFramework.Runtime.Controllers
 {
     public interface IComponentObserver
     {

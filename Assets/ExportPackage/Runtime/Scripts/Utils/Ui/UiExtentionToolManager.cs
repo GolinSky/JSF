@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 
-namespace CodeFramework.Runtime.Utils.Ui
+namespace CodeFramework.Runtime.Controllers.Utils.Ui
 {
     public static class UiExtentionToolManager 
     {

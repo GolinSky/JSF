@@ -2,7 +2,7 @@
 using EventHandlerUtils;
 using UnityEngine;
 
-namespace CodeFramework.Runtime.Utils.TimeEntity.TimerEntity.Controller
+namespace CodeFramework.Runtime.Controllers.Utils.TimeEntity.TimerEntity.Controller
 {
     public class TimerController: ITimer
     {

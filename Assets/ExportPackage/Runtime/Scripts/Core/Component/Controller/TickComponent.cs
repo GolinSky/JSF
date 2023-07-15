@@ -1,6 +1,6 @@
-﻿using CodeFramework.Runtime.Observer;
+﻿using CodeFramework.Runtime.Controllers.Observer;
 
-namespace CodeFramework.Runtime
+namespace CodeFramework.Runtime.Controllers
 {
     public interface ITick
     {

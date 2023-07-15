@@ -1,5 +1,5 @@
 ﻿#pragma warning disable 0649
-namespace CodeFramework.Runtime.Utils.Parse
+namespace CodeFramework.Runtime.Controllers.Utils.Parse
 {
     public static class TimeUtils
     {

@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace CodeFramework.Runtime.Utils.Ui
+namespace CodeFramework.Runtime.Controllers.Utils.Ui
 {
     [Serializable]
     public class ButtonUtils<T> where T : struct
