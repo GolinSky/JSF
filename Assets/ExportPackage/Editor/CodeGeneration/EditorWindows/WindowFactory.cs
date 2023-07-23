@@ -1,12 +1,13 @@
-using CodeFramework.Editor;
+using System;
+using CodeFramework.Editor.EditorWindows;
 
 namespace Editor.EditorWindows
 {
-    public class WindowFactory
+    public static class WindowFactory
     {
-        public static CreateTemplateWindow CreateTemplateWindow(string entityType)
+        public static TCustomEditorWindow CreateWindow<TCustomEditorWindow>(string name) where TCustomEditorWindow:CustomEditorWindow<string>
         {
-            return new CreateTemplateWindow(entityType);
+            return (TCustomEditorWindow)Activator.CreateInstance(typeof(TCustomEditorWindow), name);
         }
     }
 }

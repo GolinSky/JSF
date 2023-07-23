@@ -8,10 +8,12 @@ namespace CodeFramework.Editor
     {
         public abstract string EntityType { get; }
         protected ProjectSettings ProjectSettings { get; }
+        
+        public string Value => EntityType;
 
         protected CodeGeneratingTemplate( )
         {
-            ProjectSettings = Resources.Load<ProjectSettings>(Configuration.ProjectSettingsPath);
+            ProjectSettings = Resources.Load<ProjectSettings>(Configuration.ProjectSettingsName);
 
         }
         

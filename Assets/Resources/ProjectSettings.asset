@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7166b1f98d634c1e88ed9a7dea369a9b, type: 3}
   m_Name: ProjectSettings
   m_EditorClassIdentifier: 
-  <ProjectName>k__BackingField: Template
+  <ProjectName>k__BackingField: TestProject
+  folderPathDictionary:
+    keyValue: []
+  test: A:/Projects/JSF/Assets/ExportPackage

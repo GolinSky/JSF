@@ -15,7 +15,7 @@ namespace CodeFramework.Editor
             EntityType = entityType;
         }
 
-        public override string Result => entityNameField.value;
+        public override string Result1 => entityNameField.value;
 
         private void CreateGUI()
         {
@@ -23,8 +23,9 @@ namespace CodeFramework.Editor
 
             Label label = new Label($"Create {EntityType} Window");
             root.Add(label);
-
-
+            
+            
+            
             entityNameField = new TextField();
             entityNameField.name = "input field";
             entityNameField.tooltip = $"Enter {EntityType} name...";
