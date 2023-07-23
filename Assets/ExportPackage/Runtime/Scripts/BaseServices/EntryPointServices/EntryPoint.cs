@@ -10,10 +10,10 @@ namespace CodeFramework.Runtime.Controllers.BaseServices.EntryPointServices
         {
             Debug.Log("Execute default game pipeline");
 
-            GameContext gameContext = Resources.Load<GameContext>(Configuration.GameContextPath);
+             GameContext gameContext = Resources.Load<GameContext>(Configuration.GameContextName);
             if (gameContext == null)
             {
-                Debug.LogError($"Skipped default game pipeline. GameContext is not find at path {Configuration.GameContextPath}");
+                Debug.LogError($"Skipped default game pipeline. GameContext is not find at path {Configuration.GameContextName}");
                 return;
             }
 

@@ -8,8 +8,8 @@ namespace ExportPackage.Editor
     {
         private const string ResourcesFolderName = "Resources";
         private static readonly string ResourcesPath = $"Assets/{ResourcesFolderName}";
+        
         [MenuItem("JSF/Validate Project", false, 1)]
-
         public static void Validate()
         {
             var projectSettings = Resources.Load<ProjectSettings>(Configuration.ProjectSettingsName);
