@@ -22,7 +22,7 @@ namespace CodeFramework.Runtime.Controllers
         public virtual bool HasView => true;
 
 
-        public Controller(IGameService gameService)
+        protected Controller(IGameService gameService)
         {
             GameService = gameService;
         }
