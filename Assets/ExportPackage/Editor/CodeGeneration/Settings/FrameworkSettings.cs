@@ -1,8 +1,7 @@
-using CodeFramework.Editor;
 using ExportPackage.Editor.CodeGeneration.EditorWindows;
 using UnityEditor;
 
-namespace ExportPackage.Editor.CodeGeneration.Settings
+namespace CodeFramework.Editor
 {
     public class FrameworkSettings
     {

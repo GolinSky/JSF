@@ -2,7 +2,7 @@ using CodeFramework.Runtime.Controllers.ConfigurationService;
 using UnityEngine;
 using UnityEditor;
 
-namespace ExportPackage.Editor
+namespace CodeFramework.Editor
 {
     public static class FileValidationService
     {

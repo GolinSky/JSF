@@ -1,10 +1,7 @@
 using System;
-using CodeFramework.RetrogitRestPackage.Attributes.Methods;
-using CodeFramework.Runtime.Controllers;
-using UnityEditor;
 using UnityEngine;
 
-namespace ExportPackage.Editor
+namespace CodeFramework.Editor
 {
     public enum FrameworkPath
     {
@@ -19,7 +16,6 @@ namespace ExportPackage.Editor
     {
         [field:SerializeField] public string ProjectName { get; private set; }
         
-        [Head("Folder Path:")]
         [field: SerializeField] public string RootPath { get; private set; }
         [field: SerializeField] public string ViewPath { get; private set; }
         [field: SerializeField] public string ControllerPath { get; private set; }

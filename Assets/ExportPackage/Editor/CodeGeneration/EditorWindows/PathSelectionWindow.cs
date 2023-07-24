@@ -1,4 +1,3 @@
-using System;
 using Castle.Core.Internal;
 using CodeFramework.Editor.EditorWindows;
 using UnityEditor;

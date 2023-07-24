@@ -1,6 +1,7 @@
+using ExportPackage.Editor;
 using UnityEditor;
 
-namespace ExportPackage.Editor
+namespace CodeFramework.Editor
 {
     [InitializeOnLoad]
     public sealed class EditorStartup

@@ -1,6 +1,5 @@
 using CodeFramework.Editor;
 using UnityEditor;
-using UnityEngine;
 
 namespace ExportPackage.Editor.CodeGeneration.EditorWindows
 {
