@@ -1,4 +1,5 @@
 using CodeFramework.Editor;
+using UnityEditor;
 using UnityEngine;
 
 namespace ExportPackage.Editor.CodeGeneration.EditorWindows
@@ -14,8 +15,10 @@ namespace ExportPackage.Editor.CodeGeneration.EditorWindows
 
         protected override void OnClosedInternal()
         {
-           
             ProjectSettings.UpdatePath(frameworkPath,  window.Path);
+            EditorUtility.SetDirty(ProjectSettings);
+            AssetDatabase.SaveAssetIfDirty(ProjectSettings);
+            AssetDatabase.SaveAssets();
         }
     }
 }

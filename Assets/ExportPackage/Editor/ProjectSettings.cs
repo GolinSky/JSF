@@ -20,9 +20,9 @@ namespace ExportPackage.Editor
         [field:SerializeField] public string ProjectName { get; private set; }
         
         [Head("Folder Path:")]
-        [field: SerializeField] protected string RootPath { get; private set; }
-        [field: SerializeField] protected string ViewPath { get; private set; }
-        [field: SerializeField] protected string ControllerPath { get; private set; }
+        [field: SerializeField] public string RootPath { get; private set; }
+        [field: SerializeField] public string ViewPath { get; private set; }
+        [field: SerializeField] public string ControllerPath { get; private set; }
 
         public void UpdatePath(FrameworkPath frameworkPath, string path)
         {
