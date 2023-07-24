@@ -24,7 +24,7 @@ namespace CodeFramework.Editor
 
         protected WindowHandler(TEntityProvider provider)
         {
-            ProjectSettings = Resources.Load<ProjectSettings>(Configuration.ProjectSettingsName);
+            ProjectSettings = Configuration.GetDefaultRepository().Load<ProjectSettings>(Configuration.ProjectSettingsName);
 
             Provider = provider;
             EntityType = Provider.Value;

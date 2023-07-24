@@ -9,8 +9,7 @@ namespace CodeFramework.Runtime.Controllers.BaseServices.EntryPointServices
         private static void OnRuntimeInitializeOnLoadMethod()
         {
             Debug.Log("Execute default game pipeline");
-
-             GameContext gameContext = Resources.Load<GameContext>(Configuration.GameContextName);
+            GameContext gameContext = Configuration.GetDefaultRepository().Load<GameContext>(Configuration.GameContextName);
             if (gameContext == null)
             {
                 Debug.LogError($"Skipped default game pipeline. GameContext is not find at path {Configuration.GameContextName}");

@@ -12,7 +12,7 @@ namespace ExportPackage.Editor
         [MenuItem("JSF/Validate Project", false, 1)]
         public static void Validate()
         {
-            var projectSettings = Resources.Load<ProjectSettings>(Configuration.ProjectSettingsName);
+            var projectSettings = Configuration.GetDefaultRepository().Load<ProjectSettings>(Configuration.ProjectSettingsName);
             if (projectSettings == null)
             {
                 Debug.Log("Missing ProjectSettings asset. Create new one");
