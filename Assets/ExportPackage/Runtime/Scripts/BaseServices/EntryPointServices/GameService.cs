@@ -5,7 +5,7 @@ namespace CodeFramework.Runtime.Controllers.BaseServices
 {
     public interface IEntryPoint
     {
-        void Start();
+        void StartGame();
     }
 
     public interface IGameService
@@ -32,7 +32,7 @@ namespace CodeFramework.Runtime.Controllers.BaseServices
             TickService = tickableFactory.Construct();
         }
 
-        public void Start()
+        public void StartGame()
         {
             //todo: initialization
             OnBeforeStart();
