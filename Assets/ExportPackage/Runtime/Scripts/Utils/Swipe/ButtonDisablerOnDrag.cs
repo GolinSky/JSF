@@ -16,7 +16,12 @@ namespace CodeFramework.Runtime.Controllers.Utils.Swipe
 
         private void Start()
         {
-            swipeComponent.DragHandler.AddListener(HandleDrag);
+            swipeComponent.DragHandler += HandleDrag;
+        }
+
+        private void OnDestroy()
+        {
+            swipeComponent.DragHandler -= HandleDrag;
         }
 
         private void HandleDrag(bool isDrag)

@@ -1,4 +1,3 @@
-using Castle.Core.Internal;
 using CodeFramework.Editor.EditorWindows;
 using UnityEditor;
 using UnityEngine;
@@ -37,7 +36,7 @@ namespace CodeFramework.Editor
         private void OnSave()
         {
             // var isValid = Uri.IsWellFormedUriString(Result, UriKind.RelativeOrAbsolute); check why not worked
-            if (Result1.IsNullOrEmpty()) // validate for path pattern here
+            if (string.IsNullOrEmpty(Result1)) // validate for path pattern here
             {
                 Debug.LogError("Path is null or empty");
                 return;

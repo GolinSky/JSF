@@ -1,15 +1,15 @@
 ﻿using System;
-using EventHandlerUtils;
 using UnityEngine;
 
 namespace CodeFramework.Runtime.Controllers.Utils.TimeEntity.TimerEntity.Controller
 {
     public class TimerController: ITimer
     {
+        public event Action TimerHandler;
+
         private float delay;
         private float timer;
 
-        private Handler TimerHandler { get; set; } = new Handler();
         public TimerController(float delay)
         {
             this.delay = delay;
@@ -59,14 +59,5 @@ namespace CodeFramework.Runtime.Controllers.Utils.TimeEntity.TimerEntity.Control
             timer += appendDelay;
         }
 
-        public void AddListener(Action action)
-        {
-            TimerHandler.AddListener(action);
-        }
-
-        public void RemoveListener(Action action)
-        {
-            TimerHandler.RemoveListener(action);
-        }
     }
 }

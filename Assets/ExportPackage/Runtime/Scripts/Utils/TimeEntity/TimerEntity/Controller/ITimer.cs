@@ -15,7 +15,9 @@ namespace CodeFramework.Runtime.Controllers.Utils.TimeEntity.TimerEntity.Control
 
     public interface IListener
     {
-        void AddListener(Action action);
-        void RemoveListener(Action action);
+        // void AddListener(Action action);
+        // void RemoveListener(Action action);
+        
+        event Action TimerHandler;
     }
 }

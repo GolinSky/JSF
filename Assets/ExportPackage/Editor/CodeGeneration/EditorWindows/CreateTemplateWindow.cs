@@ -1,4 +1,3 @@
-using Castle.Core.Internal;
 using CodeFramework.Editor.EditorWindows;
 using UnityEngine.UIElements;
 
@@ -49,7 +48,7 @@ namespace CodeFramework.Editor
         private void OnClicked()
         {
             var value = entityNameField.value;
-            if (!value.IsNullOrEmpty())
+            if (!string.IsNullOrEmpty(value))
             {
                 InvokeClosedEvent();
             }

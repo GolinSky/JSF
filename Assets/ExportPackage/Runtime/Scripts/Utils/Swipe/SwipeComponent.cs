@@ -1,11 +1,12 @@
 ﻿using System;
-using EventHandlerUtils;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace CodeFramework.Runtime.Controllers.Utils.Swipe
 {
+    // need to check this and rebuild
+    
     /// <summary>
     /// Behave like usual unity component 
     /// </summary>
@@ -16,8 +17,9 @@ namespace CodeFramework.Runtime.Controllers.Utils.Swipe
         [SerializeField] public bool allowDrag = true; 
         private bool exitPoint = true;
         private Vector2 dragStart;
-        public Handler<Direction> SwapHandler { get; } = new Handler<Direction>();
-        public Handler<bool> DragHandler { get; } = new Handler<bool>();
+        public event Action<Direction> SwapHandler;
+
+        public event Action<bool> DragHandler;
         //
         /// <summary>
         /// Here you detect direction of swap
@@ -66,7 +68,7 @@ namespace CodeFramework.Runtime.Controllers.Utils.Swipe
 
         public void RemoveAllListeners()
         {
-            SwapHandler.Reset();
+            SwapHandler = null;
         }
 
         public void OnPointerExit(PointerEventData data)
