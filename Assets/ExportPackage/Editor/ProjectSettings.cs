@@ -15,7 +15,7 @@ namespace CodeFramework.Editor
     public sealed class ProjectSettings:ScriptableObject
     {
         [field:SerializeField] public string ProjectName { get; private set; }
-        
+        [field: Header("Root Path")]
         [field: SerializeField] public string RootPath { get; private set; }
         [field: SerializeField] public string ViewPath { get; private set; }
         [field: SerializeField] public string ControllerPath { get; private set; }
