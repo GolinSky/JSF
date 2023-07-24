@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using CodeFramework.Runtime.Controllers.BaseServices;
 using CodeFramework.Runtime.Controllers.Observer;
+using GofPatterns.Patterns.Behavioral.Observer.Custom;
 
 namespace CodeFramework.Runtime.Controllers
 {
@@ -16,7 +17,7 @@ namespace CodeFramework.Runtime.Controllers
         protected IGameFactory GameFactory { get; private set; }
         protected IHub<IService> ServiceHub { get; private set; }
 
-        public ObserverSubject<float> TickService => GameService.TickService;
+        public ICustomSubject<float> TickService => GameService.TickService;
 
         public virtual string Id => GetType().Name;
         public virtual bool HasView => true;

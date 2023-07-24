@@ -13,7 +13,7 @@ namespace CodeFramework.Editor
 
         protected CodeGeneratingTemplate( )
         {
-            ProjectSettings = Resources.Load<ProjectSettings>(Configuration.ProjectSettingsName);
+            ProjectSettings = Resources.Load<ProjectSettings>(Configuration.ProjectSettingsName);//todo:Create editorConfiguration
 
         }
         

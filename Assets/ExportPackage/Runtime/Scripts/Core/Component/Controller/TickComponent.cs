@@ -1,4 +1,5 @@
 ﻿using CodeFramework.Runtime.Controllers.Observer;
+using GofPatterns.Patterns.Behavioral.Observer.Custom;
 
 namespace CodeFramework.Runtime.Controllers
 {
@@ -8,7 +9,7 @@ namespace CodeFramework.Runtime.Controllers
     }
     public class TickComponent:ControllerComponent, ICustomObserver<float>
     {
-        private ObserverSubject<float> tickService;
+        private ICustomSubject<float> tickService;
         protected ITick Tick { get; }
 
         public TickComponent(ITick tick)
@@ -30,7 +31,8 @@ namespace CodeFramework.Runtime.Controllers
             }
         }
 
-        public void UpdateState(float state)
+     
+        public void Notify(float state)
         {
             Tick.Update(state);
         }

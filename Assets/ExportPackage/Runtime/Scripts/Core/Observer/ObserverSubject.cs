@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
+using GofPatterns.Patterns.Behavioral.Observer.Custom;
 using UnityEngine;
 
 namespace CodeFramework.Runtime.Controllers.Observer
 {
-    public class ObserverSubject<T> : MonoBehaviour, ICustomObservable<T>
+    public class ObserverSubject<T> : MonoBehaviour, ICustomSubject<T>
     {
         private List<ICustomObserver<T>> customObserversList = new List<ICustomObserver<T>>();
         public static ObserverSubject<T> ObserverInstance { get; private set; }
@@ -19,7 +20,7 @@ namespace CodeFramework.Runtime.Controllers.Observer
         public void AddObserver(ICustomObserver<T> o)
         {
             customObserversList.Add(o);
-            o.UpdateState(currentState);
+            o.Notify(currentState);
         }
 
         public void RemoveObserver(ICustomObserver<T> o)
@@ -32,7 +33,7 @@ namespace CodeFramework.Runtime.Controllers.Observer
             currentState = state;
             for (var i = 0; i < customObserversList.Count; i++)
             {
-                customObserversList[i].UpdateState(state);
+                customObserversList[i].Notify(state);
             }
         }
 

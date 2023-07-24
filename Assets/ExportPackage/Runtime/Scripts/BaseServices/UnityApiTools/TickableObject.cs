@@ -3,11 +3,10 @@ using UnityEngine;
 
 namespace CodeFramework
 {
-    public class TickableObject : ObserverSubject<float>
+    public sealed class TickableObject : ObserverSubject<float>
     {
-        protected override void Awake()
+        private void Awake()
         {
-            base.Awake();
             DontDestroyOnLoad(this);
         }
 
