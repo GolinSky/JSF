@@ -1,5 +1,3 @@
-using CodeFramework.Runtime.Controllers.ConfigurationService;
-using ExportPackage.Editor;
 using UnityEngine;
 
 namespace CodeFramework.Editor
@@ -13,7 +11,7 @@ namespace CodeFramework.Editor
 
         protected CodeGeneratingTemplate( )
         {
-            ProjectSettings = Resources.Load<ProjectSettings>(Configuration.ProjectSettingsName);//todo:Create editorConfiguration
+            ProjectSettings = Resources.Load<ProjectSettings>(EditorConfiguration.ProjectSettingsName);//todo:Create editorConfiguration
 
         }
         

@@ -4,7 +4,11 @@ using UnityEngine.SceneManagement;
 
 namespace CodeFramework.Runtime.Controllers.BaseServices
 {
-    public abstract class SceneModel<TSceneKey>: ScriptableObject
+    public interface ISceneModel
+    {
+        
+    }
+    public abstract class SceneModel<TSceneKey>: ScriptableObject, ISceneModel
     {
         [SerializeField] private DictionaryWrapper<TSceneKey, SceneReference> sceneDictionaryWrapper;
 

@@ -1,5 +1,4 @@
 using CodeFramework.Editor.EditorWindows;
-using CodeFramework.Runtime.Controllers.ConfigurationService;
 using Editor.EditorWindows;
 using ExportPackage.Runtime.Scripts.Other;
 
@@ -22,7 +21,7 @@ namespace CodeFramework.Editor
 
         protected WindowHandler(TEntityProvider provider)
         {
-            ProjectSettings = Configuration.GetDefaultRepository().Load<ProjectSettings>(Configuration.ProjectSettingsName);
+            ProjectSettings = EditorConfiguration.GetDefaultRepository().Load<ProjectSettings>(EditorConfiguration.ProjectSettingsName);
 
             Provider = provider;
             EntityType = Provider.Value;

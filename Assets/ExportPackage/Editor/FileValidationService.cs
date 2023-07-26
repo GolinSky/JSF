@@ -1,4 +1,3 @@
-using CodeFramework.Runtime.Controllers.ConfigurationService;
 using UnityEngine;
 using UnityEditor;
 
@@ -12,7 +11,7 @@ namespace CodeFramework.Editor
         [MenuItem("JSF/Validate Project", false, 1)]
         public static void Validate()
         {
-            var projectSettings = Configuration.GetDefaultRepository().Load<ProjectSettings>(Configuration.ProjectSettingsName);
+            var projectSettings = EditorConfiguration.GetDefaultRepository().Load<ProjectSettings>(EditorConfiguration.ProjectSettingsName);
             if (projectSettings == null)
             {
                 Debug.Log("Missing ProjectSettings asset. Create new one");
@@ -22,7 +21,7 @@ namespace CodeFramework.Editor
                     AssetDatabase.CreateFolder("Assets", ResourcesFolderName);
                 }
 
-                AssetDatabase.CreateAsset(projectSettings, $"{ResourcesPath}/{Configuration.ProjectSettingsName}.asset");
+                AssetDatabase.CreateAsset(projectSettings, $"{ResourcesPath}/{EditorConfiguration.ProjectSettingsName}.asset");
                 //AssetDatabase.SaveAssets();
                 AssetDatabase.Refresh();
             }

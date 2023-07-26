@@ -1,3 +1,4 @@
+using CodeFramework.Runtime;
 using CodeFramework.Runtime.Controllers;
 using CodeFramework.Runtime.Controllers.BaseServices;
 using CodeFramework.Runtime.Controllers.Factory;
@@ -6,6 +7,7 @@ using CodeFramework.SimpleTemplate.Scene;
 
 namespace CodeFramework
 {
+    [EntryPoint]
     public sealed class SimpleGameService : GameService
     {
         protected override IRepository<string> Repository=> new ResourceRepository();
@@ -22,5 +24,6 @@ namespace CodeFramework
         {
             
         }
+        
     }
 }
