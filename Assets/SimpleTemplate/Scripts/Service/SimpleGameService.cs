@@ -1,18 +1,17 @@
+using CodeFramework.Runtime.Controllers;
 using CodeFramework.Runtime.Controllers.BaseServices;
 using CodeFramework.Runtime.Controllers.Factory;
+using CodeFramework.Runtime.Controllers.View;
 using CodeFramework.SimpleTemplate.Scene;
 
 namespace CodeFramework
 {
     public sealed class SimpleGameService : GameService
     {
+        protected override IRepository<string> Repository=> new ResourceRepository();
+        protected override IFactory<ViewBinding, Controller> ViewFactory => new ViewFactory(Repository);
+        protected override BehaviourMap SceneMap => new SimpleSceneMap(this);
 
-        public SimpleGameService()
-        {
-            Repository = new ResourceRepository();
-            ViewFactory = new ViewFactory(Repository);
-            SceneMap = new SimpleSceneMap(this); //todo: need to check this approach using igameservice in ctor
-        }
         protected override void OnStart()
         {
             

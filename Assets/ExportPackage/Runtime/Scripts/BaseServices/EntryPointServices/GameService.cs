@@ -20,11 +20,11 @@ namespace CodeFramework.Runtime.Controllers.BaseServices
     {
         protected ICustomSubject<float> TickService { get; }
         ICustomSubject<float> IGameService.TickService => TickService;
-        protected IRepository<string> Repository { get; set; }
+        protected abstract IRepository<string> Repository { get;  }
         IRepository<string> IGameService.Repository => Repository;
-        protected IFactory<ViewBinding, Controller> ViewFactory { get; set; }
+        protected abstract IFactory<ViewBinding, Controller> ViewFactory { get;  }
         IFactory<ViewBinding, Controller> IGameService.ViewFactory => ViewFactory;
-        protected BehaviourMap SceneMap { get; set; }
+        protected abstract BehaviourMap SceneMap { get;  }
 
 
         protected GameService()
