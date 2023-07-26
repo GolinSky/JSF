@@ -10,17 +10,10 @@ namespace CodeFramework.Runtime.Controllers.BaseServices.EntryPointServices
         [RuntimeInitializeOnLoadMethod]
         private static void OnRuntimeInitializeOnLoadMethod()
         {
-            // Debug.Log("Execute default game pipeline");
-            // GameContext gameContext = Configuration.GetDefaultRepository().Load<GameContext>(Configuration.GameContextName);
-            // if (gameContext == null)
-            // {
-            //     Debug.LogError($"Skipped default game pipeline. GameContext is not find at path {Configuration.GameContextName}");
-            //     return;
-            // }
-            //
-            // IEntryPoint service = gameContext.GameService;
-            // service.StartGame();
-
+            //todo list
+            //1. make IEntryPoint Factory -> move all reflection and type&attributes searching to factory
+            //2. add logs + add validation for checking entry point attribute
+            
             var types = FindAllDerivedTypes<IEntryPoint>();
 
             Type searchedType = null;
@@ -41,7 +34,7 @@ namespace CodeFramework.Runtime.Controllers.BaseServices.EntryPointServices
             }
         }
 
-        public static IEnumerable<Type> FindAllDerivedTypes<T>()
+        private static IEnumerable<Type> FindAllDerivedTypes<T>()
         {
             var type = typeof(T);
             return AppDomain.CurrentDomain.GetAssemblies()
