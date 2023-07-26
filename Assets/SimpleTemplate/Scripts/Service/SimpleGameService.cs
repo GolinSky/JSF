@@ -16,7 +16,6 @@ namespace CodeFramework
 
         protected override void OnStart()
         {
-            
             //check scene - load scene game service  - todo 
         }
 
@@ -24,6 +23,5 @@ namespace CodeFramework
         {
             
         }
-        
     }
 }

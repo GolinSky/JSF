@@ -13,7 +13,7 @@ namespace CodeFramework.Runtime.Controllers.BaseServices.EntryPointServices
             //todo list
             //1. make IEntryPoint Factory -> move all reflection and type&attributes searching to factory
             //2. add logs + add validation for checking entry point attribute
-            
+            //3. save success result (cache)
             var types = FindAllDerivedTypes<IEntryPoint>();
 
             Type searchedType = null;
